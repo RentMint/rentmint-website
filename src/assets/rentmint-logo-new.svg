@@ -1,0 +1,31 @@
+
+<svg width="180" height="48" viewBox="0 0 180 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap');
+      .logo-text {
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        letter-spacing: -0.025em;
+      }
+      .logo-rent {
+        fill: hsl(220, 20%, 14%);
+      }
+      .logo-mint {
+        fill: hsl(142, 76%, 36%);
+      }
+      @media (prefers-color-scheme: dark) {
+        .logo-rent {
+          fill: hsl(0, 0%, 98%);
+        }
+      }
+    </style>
+  </defs>
+  
+  <!-- RentMint Typography Logo -->
+  <text x="0" y="32" class="logo-text logo-rent" font-size="28">Rent</text>
+  <text x="76" y="32" class="logo-text logo-mint" font-size="28">Mint</text>
+  
+  <!-- Subtle accent dot -->
+  <circle cx="168" cy="28" r="3" class="logo-mint"/>
+</svg>

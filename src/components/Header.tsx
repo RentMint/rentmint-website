@@ -1,5 +1,6 @@
+
 import { Button } from "@/components/ui/button";
-import rentmintLogo from "@/assets/rentmint-logo.png";
+import rentmintLogo from "@/assets/rentmint-logo-new.svg";
 
 const Header = () => {
   return (
