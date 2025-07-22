@@ -23,7 +23,7 @@ const AnimatedCounter = ({ value, duration = 2000 }: { value: number; duration?:
 
 const HeroSection = () => {
   return (
-    <section className="bg-background py-16 md:py-20 lg:py-24 px-6 lg:px-8 relative overflow-hidden">
+    <section id="hero" className="bg-background py-16 md:py-20 lg:py-24 px-6 lg:px-8 relative overflow-hidden">
       {/* Premium background effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-rentmint-accent/5 via-transparent to-rentmint-primary/5"></div>
       <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-rentmint-accent/10 rounded-full blur-3xl animate-pulse"></div>

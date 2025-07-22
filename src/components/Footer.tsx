@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, MessageCircle, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, MessageCircle, Twitter, Youtube } from "lucide-react";
 
 const Footer = () => {
   const blockchainLogos = [
@@ -16,6 +16,7 @@ const Footer = () => {
     { name: "LinkedIn", href: "#", icon: Linkedin },
     { name: "GitHub", href: "#", icon: Github },
     { name: "Telegram", href: "#", icon: MessageCircle },
+    { name: "YouTube", href: "#", icon: Youtube },
   ];
 
   const legalLinks = [
@@ -49,7 +50,7 @@ const Footer = () => {
         {/* Footer Links */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Social Links */}
-          <div className="flex items-center gap-6">
+          <div className="flex items-center justify-center gap-8">
             {footerLinks.map((link) => {
               const Icon = link.icon;
               return (
@@ -58,10 +59,10 @@ const Footer = () => {
                   href={link.href}
                   target={link.href.startsWith("#") ? "_self" : "_blank"}
                   rel={link.href.startsWith("#") ? "" : "noopener noreferrer"}
-                  className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium"
+                  className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+                  aria-label={link.name}
                 >
-                  <Icon className="h-4 w-4" />
-                  <span className="hidden sm:inline">{link.name}</span>
+                  <Icon className="h-5 w-5" />
                 </a>
               );
             })}

@@ -37,7 +37,7 @@ const HowItWorksSection = () => {
   ];
 
   return (
-    <section className="bg-background py-16 md:py-20 lg:py-24 px-6 lg:px-8 relative overflow-hidden">
+    <section id="how-it-works" className="bg-background py-16 md:py-20 lg:py-24 px-6 lg:px-8 relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-rentmint-accent/2 to-transparent"></div>
       

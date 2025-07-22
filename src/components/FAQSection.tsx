@@ -46,11 +46,15 @@ const FAQSection = () => {
     {
       question: "How is my privacy protected?",
       answer: "RentMint never collects personal identity or bank information. All activity is encrypted and only essential information is required."
+    },
+    {
+      question: "Who is behind RentMint?",
+      answer: "RentMint is co-founded by Shuhaib Shariff and Deves Rawat — experienced engineers and exited founders who previously built SaaS and fintech products. They're passionate about solving rent and cross-border payment friction for landlords and digital nomads."
     }
   ];
 
   return (
-    <section className="py-24 px-4 bg-background">
+    <section id="faq" className="py-24 px-4 bg-background">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-6">
