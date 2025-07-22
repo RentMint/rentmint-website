@@ -1,54 +1,54 @@
-import { Zap, Shield, Globe, Bot, Vault, ArrowDownToLine } from "lucide-react";
+import { Zap, Shield, Globe, Bot, DollarSign, Lock } from "lucide-react";
 
 const WhyLandlordsLoveSection = () => {
   const benefits = [
     {
       icon: Zap,
-      title: "Instant Rent Collection",
-      subtitle: "Get paid immediately—no bank delays, no waiting for international transfers.",
+      title: "Instant Access to Funds",
+      subtitle: "Get paid in minutes—not days. Withdraw your rent anytime, to any wallet.",
       gradient: "from-yellow-500 to-orange-500",
       bgGradient: "from-yellow-50/50 to-orange-50/50 dark:from-yellow-950/20 dark:to-orange-950/20",
       borderColor: "border-yellow-100/50 dark:border-yellow-800/30"
     },
     {
-      icon: Shield,
-      title: "Complete Privacy",
-      subtitle: "No KYC required. Collect rent privately and securely—on your terms.",
-      gradient: "from-blue-500 to-indigo-600",
-      bgGradient: "from-blue-50/50 to-indigo-50/50 dark:from-blue-950/20 dark:to-indigo-950/20",
-      borderColor: "border-blue-100/50 dark:border-blue-800/30"
-    },
-    {
-      icon: Globe,
-      title: "Global Payments, Local Invoicing",
-      subtitle: "Set rent in your local currency. Collect from tenants worldwide in USDT/USDC.",
-      gradient: "from-purple-500 to-violet-600",
-      bgGradient: "from-purple-50/50 to-violet-50/50 dark:from-purple-950/20 dark:to-violet-950/20",
-      borderColor: "border-purple-100/50 dark:border-purple-800/30"
-    },
-    {
       icon: Bot,
-      title: "Automated Admin",
-      subtitle: "Invoices, reminders, and receipts handled for you. No manual follow-ups.",
+      title: "Effortless Automation",
+      subtitle: "Invoices, reminders, and receipts are handled for you—no chasing tenants.",
       gradient: "from-emerald-500 to-teal-600",
       bgGradient: "from-emerald-50/50 to-teal-50/50 dark:from-emerald-950/20 dark:to-teal-950/20",
       borderColor: "border-emerald-100/50 dark:border-emerald-800/30"
     },
     {
-      icon: Vault,
-      title: "Deposit Protection",
-      subtitle: "Collect and refund security deposits easily, with full control and transparency.",
+      icon: Globe,
+      title: "Local Invoicing, Global Reach",
+      subtitle: "Set rent in your currency; collect from anywhere. We auto-convert to USDT/USDC, instantly.",
+      gradient: "from-purple-500 to-violet-600",
+      bgGradient: "from-purple-50/50 to-violet-50/50 dark:from-purple-950/20 dark:to-violet-950/20",
+      borderColor: "border-purple-100/50 dark:border-purple-800/30"
+    },
+    {
+      icon: Shield,
+      title: "Total Privacy, No KYC",
+      subtitle: "RentMint never asks for personal info. Collect rent discreetly, with full security.",
+      gradient: "from-blue-500 to-indigo-600",
+      bgGradient: "from-blue-50/50 to-indigo-50/50 dark:from-blue-950/20 dark:to-indigo-950/20",
+      borderColor: "border-blue-100/50 dark:border-blue-800/30"
+    },
+    {
+      icon: DollarSign,
+      title: "Simple, Transparent Pricing",
+      subtitle: "0% collection fees, no surprises. Only 1% when you withdraw.",
+      gradient: "from-green-500 to-emerald-600",
+      bgGradient: "from-green-50/50 to-emerald-50/50 dark:from-green-950/20 dark:to-emerald-950/20",
+      borderColor: "border-green-100/50 dark:border-green-800/30"
+    },
+    {
+      icon: Lock,
+      title: "Enterprise-Grade Security",
+      subtitle: "Your funds are protected with the world's leading multisig vaults.",
       gradient: "from-rose-500 to-pink-600",
       bgGradient: "from-rose-50/50 to-pink-50/50 dark:from-rose-950/20 dark:to-pink-950/20",
       borderColor: "border-rose-100/50 dark:border-rose-800/30"
-    },
-    {
-      icon: ArrowDownToLine,
-      title: "One-Click Withdrawals",
-      subtitle: "Withdraw your rent when you want, to any wallet or supported network.",
-      gradient: "from-rentmint-accent to-green-500",
-      bgGradient: "from-green-50/50 to-emerald-50/50 dark:from-green-950/20 dark:to-emerald-950/20",
-      borderColor: "border-green-100/50 dark:border-green-800/30"
     }
   ];
 
