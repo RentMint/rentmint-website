@@ -1,10 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, TrendingUp } from "lucide-react";
 import { useEffect, useState } from "react";
-
-const AnimatedCounter = ({ value, duration = 2000 }: { value: number; duration?: number }) => {
+const AnimatedCounter = ({
+  value,
+  duration = 2000
+}: {
+  value: number;
+  duration?: number;
+}) => {
   const [count, setCount] = useState(0);
-
   useEffect(() => {
     let startTime: number;
     const animate = (currentTime: number) => {
@@ -17,21 +21,16 @@ const AnimatedCounter = ({ value, duration = 2000 }: { value: number; duration?:
     };
     requestAnimationFrame(animate);
   }, [value, duration]);
-
   return <span>{count.toLocaleString()}</span>;
 };
-
 const HeroSection = () => {
-  return (
-    <section 
-      id="hero" 
-      className="bg-background py-16 md:py-20 lg:py-24 px-6 lg:px-8 relative overflow-hidden"
-      aria-label="Hero section with crypto rent collection introduction"
-    >
+  return <section id="hero" className="bg-background py-16 md:py-20 lg:py-24 px-6 lg:px-8 relative overflow-hidden" aria-label="Hero section with crypto rent collection introduction">
       {/* Premium background effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-rentmint-accent/5 via-transparent to-rentmint-primary/5" aria-hidden="true"></div>
       <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-rentmint-accent/10 rounded-full blur-3xl animate-pulse" aria-hidden="true"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-rentmint-primary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} aria-hidden="true"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-rentmint-primary/10 rounded-full blur-3xl animate-pulse" style={{
+      animationDelay: '1s'
+    }} aria-hidden="true"></div>
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
@@ -41,9 +40,7 @@ const HeroSection = () => {
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tight">
               <span className="text-foreground">Collect Rent in USDC or USDT</span>
               <br />
-              <span className="bg-gradient-to-r from-rentmint-accent to-emerald-500 bg-clip-text text-transparent">
-                — No Banks, No Delays.
-              </span>
+              <span className="bg-gradient-to-r from-rentmint-accent to-emerald-500 bg-clip-text text-transparent">No Banks, No Delays.</span>
             </h1>
             
             {/* Subheadline with target keywords */}
@@ -52,11 +49,7 @@ const HeroSection = () => {
             </p>
 
             {/* Call-to-action */}
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-rentmint-primary to-rentmint-primary/90 hover:from-rentmint-primary/90 hover:to-rentmint-primary text-rentmint-primary-foreground h-12 px-8 text-base font-semibold rounded-lg group shadow-lg hover:shadow-xl transition-all duration-300"
-              aria-label="Get early access to RentMint crypto rent collection platform"
-            >
+            <Button size="lg" className="bg-gradient-to-r from-rentmint-primary to-rentmint-primary/90 hover:from-rentmint-primary/90 hover:to-rentmint-primary text-rentmint-primary-foreground h-12 px-8 text-base font-semibold rounded-lg group shadow-lg hover:shadow-xl transition-all duration-300" aria-label="Get early access to RentMint crypto rent collection platform">
               Get Early Access
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
             </Button>
@@ -82,11 +75,7 @@ const HeroSection = () => {
 
           {/* Right Content - Premium Live Dashboard */}
           <div className="lg:pl-4 mt-8 lg:mt-0">
-            <div 
-              className="bg-card/60 backdrop-blur-sm border border-border/50 rounded-2xl p-5 md:p-6 shadow-2xl hover:shadow-3xl transition-all duration-500 group"
-              role="img"
-              aria-label="Live rent dashboard showing USDT payments from tenants"
-            >
+            <div className="bg-card/60 backdrop-blur-sm border border-border/50 rounded-2xl p-5 md:p-6 shadow-2xl hover:shadow-3xl transition-all duration-500 group" role="img" aria-label="Live rent dashboard showing USDT payments from tenants">
               {/* Dashboard Header */}
               <div className="flex items-center justify-between mb-5">
                 <h3 className="text-base md:text-lg font-semibold text-foreground flex items-center gap-2">
@@ -164,14 +153,16 @@ const HeroSection = () => {
               </div>
 
               {/* Floating particles effect */}
-              <div className="absolute -top-2 -right-2 w-4 h-4 bg-rentmint-accent/20 rounded-full animate-bounce opacity-60" style={{ animationDelay: '0.5s' }} aria-hidden="true"></div>
-              <div className="absolute top-1/2 -left-1 w-2 h-2 bg-green-500/30 rounded-full animate-bounce opacity-40" style={{ animationDelay: '1.5s' }} aria-hidden="true"></div>
+              <div className="absolute -top-2 -right-2 w-4 h-4 bg-rentmint-accent/20 rounded-full animate-bounce opacity-60" style={{
+              animationDelay: '0.5s'
+            }} aria-hidden="true"></div>
+              <div className="absolute top-1/2 -left-1 w-2 h-2 bg-green-500/30 rounded-full animate-bounce opacity-40" style={{
+              animationDelay: '1.5s'
+            }} aria-hidden="true"></div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
