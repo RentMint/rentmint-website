@@ -1,101 +1,120 @@
 import { Button } from "@/components/ui/button";
+import { ArrowRight, Check } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen bg-background flex items-center justify-center px-6 lg:px-8">
+    <section className="bg-background py-20 px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left Content */}
           <div className="space-y-8">
             {/* Headline */}
             <h1 className="text-5xl md:text-6xl font-bold leading-tight tracking-tight">
               <span className="text-foreground">Collect Rent in</span>
               <br />
-              <span className="text-rentmint-accent">USDC</span> <span className="text-foreground">or</span>
+              <span className="text-foreground">USDC or USDT</span>
+              <span className="text-muted-foreground"> — </span>
               <br />
-              <span className="text-rentmint-accent">USDT</span>
+              <span className="text-rentmint-accent">No Banks, No</span>
               <br />
-              <span className="text-muted-foreground font-normal">— No Banks, No Delays.</span>
+              <span className="text-rentmint-accent">Delays.</span>
             </h1>
             
             {/* Subheadline */}
             <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
-              Instant global rent payments. Full privacy. No KYC required.
+              Send invoices in local currency. Get paid in stablecoins across chains. No KYC/AML.
             </p>
 
             {/* Call-to-action */}
             <Button 
               size="lg" 
-              className="bg-rentmint-primary hover:bg-rentmint-primary/90 text-rentmint-primary-foreground h-12 px-8 text-base font-medium rounded-lg"
+              className="bg-rentmint-primary hover:bg-rentmint-primary/90 text-rentmint-primary-foreground h-12 px-6 text-base font-medium rounded-lg group"
             >
               Get Early Access
+              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
-            
-            {/* Real-world example */}
-            <p className="text-base text-muted-foreground">
-              Easily collect ₹50,000 or $2,000 in USDT from any tenant, anywhere.
-            </p>
+
+            {/* Trust indicators */}
+            <div className="pt-8 space-y-4">
+              <div className="flex flex-wrap gap-8">
+                <div className="flex items-center gap-2">
+                  <Check className="h-5 w-5 text-rentmint-accent" />
+                  <span className="text-muted-foreground">No setup fees</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="h-5 w-5 text-rentmint-accent" />
+                  <span className="text-muted-foreground">Safe multisig secured</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="h-5 w-5 text-rentmint-accent" />
+                  <span className="text-muted-foreground">Multi-chain support</span>
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* Right Content - Payment Interface */}
-          <div className="flex justify-center lg:justify-end">
-            <div className="relative">
-              {/* Floating USDC coin */}
-              <div className="absolute -top-4 -right-4 w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center shadow-lg z-10">
-                <span className="text-white font-bold text-sm">USDC</span>
+          {/* Right Content - Live Dashboard */}
+          <div className="lg:pl-8">
+            <div className="bg-card border border-border rounded-xl p-6 shadow-lg">
+              {/* Dashboard Header */}
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-lg font-semibold text-foreground">Live Rent Dashboard (Beta)</h3>
+                <span className="bg-rentmint-accent/10 text-rentmint-accent px-3 py-1 rounded-full text-sm font-medium">
+                  Live
+                </span>
               </div>
 
-              {/* Main payment card */}
-              <div className="bg-card border border-border rounded-2xl p-8 shadow-xl max-w-sm w-full">
-                <div className="space-y-6">
-                  {/* Payment header */}
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-muted-foreground uppercase tracking-wider">Payment</span>
-                    <div className="w-3 h-3 bg-rentmint-accent rounded-full"></div>
-                  </div>
-                  
-                  {/* Amount */}
-                  <div className="space-y-2">
-                    <div className="text-3xl font-bold text-foreground">$2,000</div>
-                    <div className="text-sm text-muted-foreground">Monthly Rent</div>
-                  </div>
-                  
-                  {/* Payment method */}
+              {/* Rent Entries */}
+              <div className="space-y-4 mb-6">
+                {/* Entry 1 */}
+                <div className="flex items-center justify-between p-4 bg-rentmint-subtle/50 rounded-lg">
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-rentmint-accent rounded-full flex items-center justify-center">
-                      <span className="text-xs text-rentmint-accent-foreground font-bold">U</span>
+                    <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+                      <span className="text-blue-600 text-sm">🏢</span>
                     </div>
-                    <span className="text-base font-medium text-foreground">USDT</span>
+                    <div>
+                      <div className="font-medium text-foreground">Orchid Villa 2B</div>
+                      <div className="text-sm text-muted-foreground">Tenant: Sarah Lee</div>
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <div className="font-semibold text-foreground">1,200 USDT</div>
+                    <div className="flex items-center gap-1">
+                      <span className="bg-rentmint-accent text-rentmint-accent-foreground px-2 py-0.5 rounded text-xs font-medium">
+                        Paid ✓
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Entry 2 */}
+                <div className="flex items-center justify-between p-4 bg-rentmint-subtle/50 rounded-lg">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center">
+                      <span className="text-orange-600 text-sm">🏠</span>
+                    </div>
+                    <div>
+                      <div className="font-medium text-foreground">Marina Heights 3A</div>
+                      <div className="text-sm text-muted-foreground">Currency: MYR • Chain: Polygon</div>
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <div className="font-semibold text-foreground">2,000 USDT</div>
+                    <div className="flex items-center gap-1">
+                      <span className="bg-orange-100 text-orange-600 px-2 py-0.5 rounded text-xs font-medium">
+                        Due Today
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              {/* Success indicator */}
-              <div className="mt-4 bg-rentmint-accent/10 border border-rentmint-accent/20 rounded-xl p-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-rentmint-accent rounded-full"></div>
-                  <span className="text-sm text-rentmint-accent font-medium">Instant Transfer</span>
+              {/* Total */}
+              <div className="border-t border-border pt-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-lg font-medium text-foreground">This Month</span>
+                  <span className="text-2xl font-bold text-foreground">3,200 USDT</span>
                 </div>
-              </div>
-
-              {/* Connection lines */}
-              <div className="absolute inset-0 pointer-events-none overflow-hidden">
-                <svg className="w-full h-full opacity-20" viewBox="0 0 300 300">
-                  <path
-                    d="M20 150 Q150 50 280 150"
-                    stroke="hsl(var(--rentmint-accent))"
-                    strokeWidth="2"
-                    fill="none"
-                    strokeDasharray="4,4"
-                  />
-                  <path
-                    d="M20 180 Q150 220 280 150"
-                    stroke="hsl(var(--rentmint-primary))"
-                    strokeWidth="2"
-                    fill="none"
-                    strokeDasharray="4,4"
-                  />
-                </svg>
               </div>
             </div>
           </div>
