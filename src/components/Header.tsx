@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import rentmintLogo from "@/assets/rentmint-logo-new.svg";
+import Logo from "@/components/Logo";
 
 const Header = () => {
   return (
@@ -9,11 +9,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <img 
-              src={rentmintLogo} 
-              alt="RentMint Logo" 
-              className="h-12 w-auto object-contain"
-            />
+            <Logo className="h-12 w-auto" />
           </div>
 
           {/* Navigation */}
