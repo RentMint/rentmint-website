@@ -41,7 +41,7 @@ const HeroSection = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight">
               <span className="text-foreground text-3xl md:text-4xl lg:text-5xl">Collect Rent in USDC or USDT</span>
               <br />
-              <span className="bg-gradient-to-r from-rentmint-accent to-emerald-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-rentmint-accent to-emerald-500 bg-clip-text text-transparent text-3xl md:text-4xl lg:text-5xl">
                 — No Banks, No Delays.
               </span>
             </h1>
