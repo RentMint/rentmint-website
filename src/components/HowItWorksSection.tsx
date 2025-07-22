@@ -1,27 +1,35 @@
-import { Building2, Send, Coins, ArrowRight, Check } from "lucide-react";
+import { Building2, Bell, Coins, Receipt, ArrowRight, Check } from "lucide-react";
 
 const HowItWorksSection = () => {
   const steps = [
     {
       icon: Building2,
-      title: "Create Property",
-      subtitle: "Add your properties and tenant details in seconds",
+      title: "Set Up Your Property",
+      subtitle: "Add your property and invite your tenant. Set the rent and deposit in just a few minutes.",
       gradient: "from-blue-500 to-blue-600",
       bgGradient: "from-blue-50/50 to-indigo-50/50 dark:from-blue-950/20 dark:to-indigo-950/20",
       borderColor: "border-blue-100/50 dark:border-blue-800/30"
     },
     {
-      icon: Send,
-      title: "Send Invoice",
-      subtitle: "Invoice in local currency, get paid in USDT/USDC",
+      icon: Bell,
+      title: "Automatic Invoices & Reminders",
+      subtitle: "RentMint sends invoices and gentle reminders for you—no more chasing payments.",
+      gradient: "from-purple-500 to-violet-600",
+      bgGradient: "from-purple-50/50 to-violet-50/50 dark:from-purple-950/20 dark:to-violet-950/20",
+      borderColor: "border-purple-100/50 dark:border-purple-800/30"
+    },
+    {
+      icon: Coins,
+      title: "Tenant Pays in USDT/USDC",
+      subtitle: "Your tenant pays rent (and deposit) instantly, from anywhere, using stablecoins.",
       gradient: "from-orange-500 to-amber-500",
       bgGradient: "from-orange-50/50 to-amber-50/50 dark:from-orange-950/20 dark:to-amber-950/20",
       borderColor: "border-orange-100/50 dark:border-orange-800/30"
     },
     {
-      icon: Coins,
-      title: "Get Paid",
-      subtitle: "Instant stablecoin payments, no banks or KYC required",
+      icon: Receipt,
+      title: "Instant Receipts & Proof",
+      subtitle: "You receive rent in your dashboard. Both you and your tenant get instant receipts—no paperwork, no delays.",
       gradient: "from-rentmint-accent to-green-500",
       bgGradient: "from-green-50/50 to-emerald-50/50 dark:from-green-950/20 dark:to-emerald-950/20",
       borderColor: "border-green-100/50 dark:border-green-800/30"
@@ -40,12 +48,12 @@ const HowItWorksSection = () => {
             How RentMint Works
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground font-medium max-w-2xl mx-auto">
-            Three simple steps to transform your rent collection process
+            Four simple steps to transform your rent collection process
           </p>
         </div>
 
         {/* Steps */}
-        <div className="grid md:grid-cols-3 gap-8 md:gap-6 lg:gap-8 relative">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6 lg:gap-8 relative">
           {steps.map((step, index) => {
             const IconComponent = step.icon;
             return (
