@@ -38,7 +38,7 @@ const HeroSection = () => {
           {/* Left Content */}
           <div className="space-y-6 md:space-y-8">
             {/* Headline - Main H1 for SEO */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tight">
               <span className="text-foreground">Collect Rent in USDC or USDT</span>
               <br />
               <span className="bg-gradient-to-r from-rentmint-accent to-emerald-500 bg-clip-text text-transparent">
