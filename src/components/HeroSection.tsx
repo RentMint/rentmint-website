@@ -45,7 +45,7 @@ const HeroSection = () => {
             
             {/* Subheadline with target keywords */}
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-md font-medium">
-              Send invoices in local currency. Get paid in stablecoins across chains. No KYC/AML.
+              Send invoices in your local currency. Get paid in crypto—no wallet connection required, just sign up with your email.
             </p>
 
             {/* Call-to-action */}
