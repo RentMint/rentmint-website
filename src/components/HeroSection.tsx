@@ -23,24 +23,21 @@ const AnimatedCounter = ({ value, duration = 2000 }: { value: number; duration?:
 
 const HeroSection = () => {
   return (
-    <section className="bg-background py-16 px-6 lg:px-8 relative overflow-hidden">
+    <section className="bg-background py-16 md:py-20 lg:py-24 px-6 lg:px-8 relative overflow-hidden">
       {/* Premium background effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-rentmint-accent/5 via-transparent to-rentmint-primary/5"></div>
       <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-rentmint-accent/10 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-rentmint-primary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
       
-      <div className="max-w-6xl mx-auto relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left Content */}
-          <div className="space-y-6">
+          <div className="space-y-6 md:space-y-8">
             {/* Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight">
               <span className="text-foreground">Collect Rent in</span>
               <br />
-              <span className="bg-gradient-to-r from-rentmint-accent via-rentmint-accent to-green-500 bg-clip-text text-transparent">
-                USDC or USDT
-              </span>
-              <span className="text-muted-foreground"> — </span>
+              <span className="text-foreground">USDC or USDT.</span>
               <br />
               <span className="bg-gradient-to-r from-rentmint-accent to-emerald-500 bg-clip-text text-transparent">
                 No Banks, No Delays.
@@ -48,44 +45,44 @@ const HeroSection = () => {
             </h1>
             
             {/* Subheadline */}
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-md">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-md font-medium">
               Send invoices in local currency. Get paid in stablecoins across chains. No KYC/AML.
             </p>
 
             {/* Call-to-action */}
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-rentmint-primary to-rentmint-primary/90 hover:from-rentmint-primary/90 hover:to-rentmint-primary text-rentmint-primary-foreground h-11 px-6 text-sm font-medium rounded-lg group shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-gradient-to-r from-rentmint-primary to-rentmint-primary/90 hover:from-rentmint-primary/90 hover:to-rentmint-primary text-rentmint-primary-foreground h-12 px-8 text-base font-semibold rounded-lg group shadow-lg hover:shadow-xl transition-all duration-300"
             >
               Get Early Access
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
 
             {/* Trust indicators */}
             <div className="pt-4 space-y-3">
-              <div className="flex flex-wrap gap-6">
+              <div className="flex flex-wrap gap-4 md:gap-6">
                 <div className="flex items-center gap-2">
                   <Check className="h-4 w-4 text-rentmint-accent" />
-                  <span className="text-sm text-muted-foreground">No setup fees</span>
+                  <span className="text-sm md:text-base font-medium text-muted-foreground">No setup fees</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Check className="h-4 w-4 text-rentmint-accent" />
-                  <span className="text-sm text-muted-foreground">Safe multisig secured</span>
+                  <span className="text-sm md:text-base font-medium text-muted-foreground">Safe multisig secured</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Check className="h-4 w-4 text-rentmint-accent" />
-                  <span className="text-sm text-muted-foreground">Multi-chain support</span>
+                  <span className="text-sm md:text-base font-medium text-muted-foreground">Multi-chain support</span>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Right Content - Premium Live Dashboard */}
-          <div className="lg:pl-4">
-            <div className="bg-card/60 backdrop-blur-sm border border-border/50 rounded-2xl p-5 shadow-2xl hover:shadow-3xl transition-all duration-500 group">
+          <div className="lg:pl-4 mt-8 lg:mt-0">
+            <div className="bg-card/60 backdrop-blur-sm border border-border/50 rounded-2xl p-5 md:p-6 shadow-2xl hover:shadow-3xl transition-all duration-500 group">
               {/* Dashboard Header */}
               <div className="flex items-center justify-between mb-5">
-                <h3 className="text-base font-semibold text-foreground flex items-center gap-2">
+                <h3 className="text-base md:text-lg font-semibold text-foreground flex items-center gap-2">
                   Live Rent Dashboard 
                   <span className="text-xs text-muted-foreground">(Beta)</span>
                 </h3>
