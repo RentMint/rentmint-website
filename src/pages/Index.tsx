@@ -4,6 +4,8 @@ import HowItWorksSection from "@/components/HowItWorksSection";
 import WhyLandlordsLoveSection from "@/components/WhyLandlordsLoveSection";
 import WhyTenantsLoveSection from "@/components/WhyTenantsLoveSection";
 import FAQSection from "@/components/FAQSection";
+import CTASection from "@/components/CTASection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -14,6 +16,8 @@ const Index = () => {
       <WhyLandlordsLoveSection />
       <WhyTenantsLoveSection />
       <FAQSection />
+      <CTASection />
+      <Footer />
     </div>
   );
 };
