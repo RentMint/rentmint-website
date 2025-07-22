@@ -1,112 +1,116 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen bg-background flex items-center justify-center px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+    <section className="min-h-screen bg-background flex items-center justify-center px-6 lg:px-8 relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-rentmint-accent rounded-full animate-pulse"></div>
+        <div className="absolute top-3/4 right-1/4 w-24 h-24 bg-rentmint-primary rounded-full animate-pulse animation-delay-1000"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-20 h-20 bg-rentmint-accent rounded-full animate-pulse animation-delay-2000"></div>
+      </div>
+      
+      <div className="max-w-6xl mx-auto relative z-10">
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
           {/* Left Content */}
-          <div className="text-center lg:text-left space-y-8">
+          <div className="text-center lg:text-left space-y-12">
             {/* Headline */}
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-[0.9] tracking-tight">
+              <span className="text-foreground">Collect Rent in</span>
+              <br />
+              <span className="bg-gradient-to-r from-rentmint-accent to-rentmint-primary bg-clip-text text-transparent">
+                USDC or USDT
+              </span>
+              <br />
+              <span className="text-muted-foreground text-5xl md:text-6xl lg:text-7xl">
+                — No Banks, No Delays.
+              </span>
+            </h1>
+            
+            {/* Subheadline */}
+            <p className="text-2xl md:text-3xl text-muted-foreground leading-relaxed max-w-lg font-light">
+              Instant global rent payments. Full privacy. No KYC required.
+            </p>
+
+            {/* Call-to-action */}
             <div className="space-y-6">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight tracking-tight text-rentmint-primary">
-                Rent collection
-                <br />
-                <span className="text-rentmint-accent">reimagined</span>
-              </h1>
-              
-              {/* Subheadline */}
-              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-2xl">
-                Instant rent payments with stablecoins (USDT/USDC). No banks, no waiting, no borders. 
-                Complete privacy for landlords and tenants worldwide.
-              </p>
-            </div>
-
-            {/* Real-world example */}
-            <div className="bg-rentmint-subtle p-6 rounded-lg border border-border">
-              <p className="text-lg text-rentmint-subtle-foreground">
-                <span className="font-medium">Collect ₹50,000 or $2,000 in USDT</span> from any tenant, anywhere in the world. 
-                Instantly.
-              </p>
-            </div>
-
-            {/* Call-to-action buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button 
                 size="lg" 
-                className="bg-rentmint-primary hover:bg-rentmint-primary/90 text-rentmint-primary-foreground h-14 px-8 text-lg font-medium"
+                className="bg-rentmint-primary hover:bg-rentmint-primary/90 text-rentmint-primary-foreground h-16 px-12 text-xl font-semibold rounded-xl transition-all duration-300 hover:scale-105 shadow-lg"
               >
                 Get Early Access
-                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="h-14 px-8 text-lg font-medium border-border hover:bg-muted"
-              >
-                <Play className="mr-2 h-5 w-5" />
-                See How It Works
-              </Button>
-            </div>
-
-            {/* Trust indicators */}
-            <div className="pt-8 space-y-3">
-              <p className="text-sm text-muted-foreground">Trusted by forward-thinking landlords in</p>
-              <div className="flex flex-wrap gap-6 justify-center lg:justify-start text-muted-foreground text-sm font-medium">
-                <span>🇮🇳 India</span>
-                <span>🇹🇭 Thailand</span>
-                <span>🇦🇪 UAE</span>
-                <span>🇵🇭 Philippines</span>
-                <span>🇲🇽 Mexico</span>
-              </div>
+              {/* Real-world example */}
+              <p className="text-lg text-muted-foreground font-medium">
+                Easily collect ₹50,000 or $2,000 in USDT from any tenant, anywhere.
+              </p>
             </div>
           </div>
 
-          {/* Right Content - Placeholder for illustration */}
+          {/* Right Content - Animation Space */}
           <div className="flex justify-center lg:justify-end">
-            <div className="bg-rentmint-subtle rounded-2xl p-8 max-w-md w-full">
-              <div className="space-y-6">
-                {/* Payment interface mockup */}
-                <div className="bg-background rounded-lg p-6 border border-border shadow-sm">
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm text-muted-foreground">Monthly Rent</span>
-                      <span className="font-semibold text-rentmint-primary">$2,000</span>
+            <div className="relative w-full max-w-lg">
+              {/* Floating payment cards animation */}
+              <div className="relative h-96 w-full">
+                {/* Main payment card */}
+                <div className="absolute top-8 left-8 bg-card border border-border rounded-2xl p-8 shadow-2xl animate-float">
+                  <div className="space-y-6">
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-muted-foreground uppercase tracking-wider">Payment</span>
+                      <div className="w-3 h-3 bg-rentmint-accent rounded-full animate-pulse"></div>
                     </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm text-muted-foreground">Payment Method</span>
-                      <span className="text-sm bg-rentmint-accent/10 text-rentmint-accent px-2 py-1 rounded-md font-medium">
-                        USDT
-                      </span>
+                    <div className="space-y-2">
+                      <div className="text-3xl font-bold text-foreground">$2,000</div>
+                      <div className="text-sm text-muted-foreground">Monthly Rent</div>
                     </div>
-                    <div className="pt-4 border-t border-border">
-                      <div className="bg-rentmint-accent text-rentmint-accent-foreground rounded-lg py-3 px-4 text-center font-medium">
-                        ✓ Payment Received Instantly
+                    <div className="flex items-center gap-2">
+                      <div className="w-6 h-6 bg-rentmint-accent rounded-full flex items-center justify-center">
+                        <span className="text-xs text-rentmint-accent-foreground font-bold">U</span>
                       </div>
+                      <span className="text-sm font-medium text-foreground">USDT</span>
                     </div>
                   </div>
                 </div>
 
-                {/* Features preview */}
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3 text-sm">
-                    <div className="w-2 h-2 bg-rentmint-accent rounded-full"></div>
-                    <span className="text-rentmint-subtle-foreground">No KYC required</span>
+                {/* Floating USDC coin */}
+                <div className="absolute top-4 right-12 w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-lg animate-bounce">
+                  <span className="text-white font-bold text-sm">USDC</span>
+                </div>
+
+                {/* Floating USDT coin */}
+                <div className="absolute bottom-16 right-4 w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-lg animate-bounce animation-delay-500">
+                  <span className="text-white font-bold text-xs">USDT</span>
+                </div>
+
+                {/* Success indicator */}
+                <div className="absolute bottom-8 left-12 bg-rentmint-accent/10 border border-rentmint-accent/20 rounded-xl p-4 animate-fade-in">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-rentmint-accent rounded-full animate-pulse"></div>
+                    <span className="text-sm text-rentmint-accent font-medium">Instant Transfer</span>
                   </div>
-                  <div className="flex items-center gap-3 text-sm">
-                    <div className="w-2 h-2 bg-rentmint-accent rounded-full"></div>
-                    <span className="text-rentmint-subtle-foreground">Complete privacy</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-sm">
-                    <div className="w-2 h-2 bg-rentmint-accent rounded-full"></div>
-                    <span className="text-rentmint-subtle-foreground">Instant receipts</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-sm">
-                    <div className="w-2 h-2 bg-rentmint-accent rounded-full"></div>
-                    <span className="text-rentmint-subtle-foreground">Global access</span>
-                  </div>
+                </div>
+
+                {/* Global connectivity lines */}
+                <div className="absolute inset-0 pointer-events-none">
+                  <svg className="w-full h-full opacity-20" viewBox="0 0 400 400">
+                    <path
+                      d="M50 200 Q200 100 350 200"
+                      stroke="hsl(var(--rentmint-accent))"
+                      strokeWidth="2"
+                      fill="none"
+                      strokeDasharray="5,5"
+                      className="animate-dash"
+                    />
+                    <path
+                      d="M50 250 Q200 300 350 200"
+                      stroke="hsl(var(--rentmint-primary))"
+                      strokeWidth="2"
+                      fill="none"
+                      strokeDasharray="5,5"
+                      className="animate-dash animation-delay-1000"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
