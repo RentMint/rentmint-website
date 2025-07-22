@@ -25,75 +25,80 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-background border-t border-border/50 py-12 px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Blockchain Partners Section */}
-        <div className="text-center mb-10">
-          <p className="text-sm text-muted-foreground mb-6 font-medium">Powered by</p>
-          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
-            {blockchainLogos.map((logo) => (
-              <div
-                key={logo.name}
-                className="flex items-center justify-center w-16 h-10 bg-gradient-to-br from-muted/50 to-muted/30 border border-border/50 rounded-lg hover:shadow-md transition-all duration-300 group"
-              >
-                <span className="text-xs font-bold text-muted-foreground group-hover:text-foreground transition-colors">
-                  {logo.placeholder}
-                </span>
-              </div>
-            ))}
+    <footer className="bg-background/95 backdrop-blur-sm border-t border-border/20 py-16 px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto space-y-12">
+        
+        {/* Main Content Section */}
+        <div className="text-center space-y-8">
+          {/* Tagline */}
+          <div className="max-w-4xl mx-auto">
+            <p className="text-lg md:text-xl text-foreground font-medium leading-relaxed">
+              Stop chasing late rent. With RentMint, busy landlords invoice in local currency and get stablecoins, instantly and automatically.
+            </p>
+          </div>
+
+          {/* Blockchain Partners */}
+          <div className="space-y-6">
+            <p className="text-sm text-muted-foreground font-medium tracking-wide">Powered by</p>
+            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
+              {blockchainLogos.map((logo) => (
+                <div
+                  key={logo.name}
+                  className="flex items-center justify-center w-20 h-12 bg-gradient-to-br from-background to-muted/20 border border-border/40 rounded-xl hover:border-border/60 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 group backdrop-blur-sm"
+                >
+                  <span className="text-sm font-semibold text-muted-foreground group-hover:text-foreground transition-colors tracking-wide">
+                    {logo.placeholder}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Divider */}
-        <div className="border-t border-border/30 mb-8"></div>
+        {/* Footer Bottom */}
+        <div className="border-t border-border/20 pt-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            
+            {/* Social Links */}
+            <div className="flex items-center gap-6">
+              {footerLinks.map((link) => {
+                const Icon = link.icon;
+                return (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    target={link.href.startsWith("#") ? "_self" : "_blank"}
+                    rel={link.href.startsWith("#") ? "" : "noopener noreferrer"}
+                    className="flex items-center justify-center w-10 h-10 rounded-full bg-muted/30 hover:bg-muted/50 text-muted-foreground hover:text-foreground transition-all duration-200 hover:scale-105"
+                    aria-label={link.name}
+                  >
+                    <Icon className="h-4 w-4" />
+                  </a>
+                );
+              })}
+            </div>
 
-        {/* Footer Links */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          {/* Social Links */}
-          <div className="flex items-center justify-center gap-8">
-            {footerLinks.map((link) => {
-              const Icon = link.icon;
-              return (
+            {/* Center - Copyright */}
+            <div className="order-last md:order-none">
+              <p className="text-sm text-muted-foreground">
+                © {new Date().getFullYear()} RentMint. All rights reserved.
+              </p>
+            </div>
+
+            {/* Legal Links */}
+            <div className="flex items-center gap-8">
+              {legalLinks.map((link, index) => (
                 <a
                   key={link.name}
-                  href={link.href}
-                  target={link.href.startsWith("#") ? "_self" : "_blank"}
-                  rel={link.href.startsWith("#") ? "" : "noopener noreferrer"}
-                  className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-                  aria-label={link.name}
-                >
-                  <Icon className="h-5 w-5" />
-                </a>
-              );
-            })}
-          </div>
-
-          {/* Legal Links */}
-          <div className="flex items-center gap-6">
-            {legalLinks.map((link, index) => (
-              <div key={link.name} className="flex items-center gap-6">
-                <a
                   href={link.href}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium"
                 >
                   {link.name}
                 </a>
-                {index < legalLinks.length - 1 && (
-                  <div className="w-px h-4 bg-border/50"></div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
+              ))}
+            </div>
 
-        {/* Copyright & Tagline */}
-        <div className="text-center mt-8 pt-6 border-t border-border/30 space-y-3">
-          <p className="text-sm text-foreground font-medium max-w-3xl mx-auto">
-            Stop chasing late rent. With RentMint, busy landlords invoice in local currency and get stablecoins, instantly and automatically.
-          </p>
-          <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} RentMint. All rights reserved.
-          </p>
+          </div>
         </div>
       </div>
     </footer>
