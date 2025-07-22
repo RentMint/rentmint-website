@@ -20,7 +20,7 @@ const Logo = ({ className = "h-12 w-auto" }: { className?: string }) => {
           Rent
         </text>
         <text
-          x="76"
+          x="68"
           y="32"
           className="font-display font-bold text-rentmint-accent fill-rentmint-accent"
           fontSize="28"
