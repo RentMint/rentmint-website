@@ -5,7 +5,7 @@ const HowItWorksSection = () => {
     {
       icon: Building2,
       title: "Set Up Your Property",
-      subtitle: "Add your property and invite your tenant. Set the rent and deposit in just a few minutes.",
+      subtitle: "Add your property and invite your tenant. Set rent and deposit amounts in your local currency.",
       gradient: "from-blue-500 to-blue-600",
       bgGradient: "from-blue-50/50 to-indigo-50/50 dark:from-blue-950/20 dark:to-indigo-950/20",
       borderColor: "border-blue-100/50 dark:border-blue-800/30"
@@ -20,8 +20,8 @@ const HowItWorksSection = () => {
     },
     {
       icon: Coins,
-      title: "Tenant Pays in USDT/USDC",
-      subtitle: "Your tenant pays rent (and deposit) instantly, from anywhere, using stablecoins.",
+      title: "Tenant Pays in USDT",
+      subtitle: "Tenant pays the exact USDT/USDC equivalent, with real-time conversion—no banks, no borders.",
       gradient: "from-orange-500 to-amber-500",
       bgGradient: "from-orange-50/50 to-amber-50/50 dark:from-orange-950/20 dark:to-amber-950/20",
       borderColor: "border-orange-100/50 dark:border-orange-800/30"
@@ -29,7 +29,7 @@ const HowItWorksSection = () => {
     {
       icon: Receipt,
       title: "Instant Receipts & Proof",
-      subtitle: "You receive rent in your dashboard. Both you and your tenant get instant receipts—no paperwork, no delays.",
+      subtitle: "You receive rent in your dashboard. Your tenant get instant receipts—no paperwork, no delays.",
       gradient: "from-rentmint-accent to-green-500",
       bgGradient: "from-green-50/50 to-emerald-50/50 dark:from-green-950/20 dark:to-emerald-950/20",
       borderColor: "border-green-100/50 dark:border-green-800/30"
