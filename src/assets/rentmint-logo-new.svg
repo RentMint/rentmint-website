@@ -24,8 +24,8 @@
   
   <!-- RentMint Typography Logo -->
   <text x="0" y="32" class="logo-text logo-rent" font-size="28">Rent</text>
-  <text x="76" y="32" class="logo-text logo-mint" font-size="28">Mint</text>
+  <text x="58" y="32" class="logo-text logo-mint" font-size="28">Mint</text>
   
   <!-- Subtle accent dot -->
-  <circle cx="168" cy="28" r="3" class="logo-mint"/>
+  <circle cx="118" cy="28" r="2.5" class="logo-mint"/>
 </svg>

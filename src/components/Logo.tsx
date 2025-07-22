@@ -20,7 +20,7 @@ const Logo = ({ className = "h-12 w-auto" }: { className?: string }) => {
           Rent
         </text>
         <text
-          x="68"
+          x="58"
           y="32"
           className="font-display font-bold text-rentmint-accent fill-rentmint-accent"
           fontSize="28"
@@ -30,7 +30,7 @@ const Logo = ({ className = "h-12 w-auto" }: { className?: string }) => {
         </text>
         
         {/* Subtle accent dot */}
-        <circle cx="130" cy="28" r="3" className="fill-rentmint-accent" />
+        <circle cx="118" cy="28" r="2.5" className="fill-rentmint-accent" />
       </svg>
     </div>
   );
