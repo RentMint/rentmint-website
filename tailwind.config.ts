@@ -61,6 +61,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				rentmint: {
+					primary: 'hsl(var(--rentmint-primary))',
+					'primary-foreground': 'hsl(var(--rentmint-primary-foreground))',
+					accent: 'hsl(var(--rentmint-accent))',
+					'accent-foreground': 'hsl(var(--rentmint-accent-foreground))',
+					subtle: 'hsl(var(--rentmint-subtle))',
+					'subtle-foreground': 'hsl(var(--rentmint-subtle-foreground))'
 				}
 			},
 			borderRadius: {
