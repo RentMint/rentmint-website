@@ -45,7 +45,9 @@ const HeroSection = () => {
             
             {/* Subheadline with target keywords */}
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-md font-medium">
-              Send invoices in your local currency. Tenants pay in crypto—no wallets, no crypto skills. Just email and get paid.
+              Send invoices in your local currency. Tenants pay in crypto—no wallets, no crypto skills. 
+              <br />
+              Just email and get paid.
             </p>
 
             {/* Call-to-action */}
