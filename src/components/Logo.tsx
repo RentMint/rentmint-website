@@ -30,7 +30,7 @@ const Logo = ({ className = "h-12 w-auto" }: { className?: string }) => {
         </text>
         
         {/* Subtle accent dot */}
-        <circle cx="168" cy="28" r="3" className="fill-rentmint-accent" />
+        <circle cx="130" cy="28" r="3" className="fill-rentmint-accent" />
       </svg>
     </div>
   );
