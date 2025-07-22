@@ -27,6 +27,13 @@ const Footer = () => {
   return (
     <footer className="bg-background border-t border-border/50 py-12 px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
+        {/* Company Tagline */}
+        <div className="text-center mb-10">
+          <p className="text-lg text-foreground font-medium max-w-4xl mx-auto leading-relaxed">
+            Stop chasing late rent. With RentMint, busy landlords invoice in local currency and get stablecoins, instantly and automatically.
+          </p>
+        </div>
+
         {/* Blockchain Partners Section */}
         <div className="text-center mb-10">
           <p className="text-sm text-muted-foreground mb-6 font-medium">Powered by</p>
