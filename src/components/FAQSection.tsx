@@ -33,7 +33,7 @@ const FAQSection = () => {
     },
     {
       question: "How does FX conversion work for invoicing?",
-      answer: "You can generate invoices in your local currency (INR, MXN, AED, etc.). RentMint fetches real-time exchange rates and automatically converts the rent to USDT/USDC for payment, locking the rate for up to 48 hours."
+      answer: "You can generate invoices in your choice of 25 supported local currencies. RentMint instantly converts the rent amount to USDT or USDC using the latest exchange rates, so tenants always know exactly what to pay."
     },
     {
       question: "Is RentMint compliant with local regulations or taxes?",
@@ -54,8 +54,8 @@ const FAQSection = () => {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-6">
-            <HelpCircle className="h-8 w-8 text-rentmint-600" />
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-rentmint-600 to-rentmint-700 bg-clip-text text-transparent">
+            <HelpCircle className="h-8 w-8 text-rentmint-accent" />
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-rentmint-primary to-rentmint-accent bg-clip-text text-transparent">
               Frequently Asked Questions
             </h2>
           </div>
