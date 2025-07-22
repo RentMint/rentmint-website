@@ -53,9 +53,13 @@ const WhyLandlordsLoveSection = () => {
   ];
 
   return (
-    <section id="for-landlords" className="bg-background py-16 md:py-20 lg:py-24 px-6 lg:px-8 relative overflow-hidden">
+    <section 
+      id="for-landlords" 
+      className="bg-background py-16 md:py-20 lg:py-24 px-6 lg:px-8 relative overflow-hidden"
+      aria-label="Benefits of RentMint for landlords"
+    >
       {/* Background effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-rentmint-accent/1 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-rentmint-accent/1 to-transparent" aria-hidden="true"></div>
       
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
@@ -64,21 +68,21 @@ const WhyLandlordsLoveSection = () => {
             Why Landlords Love RentMint
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground font-medium max-w-2xl mx-auto">
-            Everything you need to modernize rent collection and eliminate payment headaches
+            Everything you need to modernize <strong>stablecoin rent payment</strong> collection and eliminate payment headaches
           </p>
         </div>
 
         {/* Benefits Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8" role="list">
           {benefits.map((benefit, index) => {
             const IconComponent = benefit.icon;
             return (
-              <div key={index} className="group">
+              <div key={index} className="group" role="listitem">
                 {/* Benefit Card */}
                 <div className={`bg-gradient-to-br ${benefit.bgGradient} backdrop-blur-sm border ${benefit.borderColor} rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-500 group-hover:scale-105 relative overflow-hidden h-full`}>
                   
                   {/* Icon */}
-                  <div className={`w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br ${benefit.gradient} rounded-xl flex items-center justify-center shadow-lg mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br ${benefit.gradient} rounded-xl flex items-center justify-center shadow-lg mb-6 group-hover:scale-110 transition-transform duration-300`} aria-hidden="true">
                     <IconComponent className="h-6 w-6 md:h-7 md:w-7 text-white" />
                   </div>
 
@@ -93,7 +97,7 @@ const WhyLandlordsLoveSection = () => {
                   </div>
 
                   {/* Floating decoration */}
-                  <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-gradient-to-br from-white/10 to-white/5 rounded-full blur-sm opacity-60"></div>
+                  <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-gradient-to-br from-white/10 to-white/5 rounded-full blur-sm opacity-60" aria-hidden="true"></div>
                 </div>
               </div>
             );
