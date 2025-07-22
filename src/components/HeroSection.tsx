@@ -48,7 +48,7 @@ const HeroSection = () => {
             
             {/* Subheadline with target keywords */}
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-md font-medium">
-              Revolutionary <strong>crypto rent collection</strong> platform. Send invoices in local currency, receive <strong>stablecoin rent payments</strong> instantly across multiple blockchains. No KYC required.
+              Send invoices in local currency. Get paid in stablecoins across chains. No KYC/AML.
             </p>
 
             {/* Call-to-action */}
