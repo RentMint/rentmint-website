@@ -10,7 +10,11 @@ const BaliHero = () => {
         <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto font-medium mb-8">
           Connect easily with trusted landlords and property managers accepting USDT/USDC.
         </p>
-        <Button size="lg" className="bg-rentmint-primary hover:bg-rentmint-primary/90 text-white shadow-lg">
+        <Button 
+          size="lg" 
+          className="bg-rentmint-primary hover:bg-rentmint-primary/90 text-white shadow-lg"
+          onClick={() => document.getElementById('directory')?.scrollIntoView({ behavior: 'smooth' })}
+        >
           Browse Directory
         </Button>
       </div>

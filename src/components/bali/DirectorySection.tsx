@@ -64,7 +64,7 @@ const DirectorySection = () => {
   ];
 
   return (
-    <section className="py-20 px-4">
+    <section id="directory" className="py-20 px-4 scroll-mt-20">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-12 text-rentmint-primary">
           Crypto-Friendly Directory
@@ -85,9 +85,15 @@ const DirectorySection = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3">
-                    <div className="flex items-center text-sm">
-                      <MapPin className="w-4 h-4 mr-2 text-muted-foreground" />
-                      {landlord.areas.join(", ")}
+                    <div className="flex items-start">
+                      <MapPin className="w-4 h-4 mr-2 mt-0.5 text-muted-foreground flex-shrink-0" />
+                      <div className="flex flex-wrap gap-1">
+                        {landlord.areas.map((area, idx) => (
+                          <Badge key={idx} variant="outline" className="text-xs bg-muted/50">
+                            {area}
+                          </Badge>
+                        ))}
+                      </div>
                     </div>
                     <div className="flex items-center justify-between">
                       <Badge variant="secondary" className="bg-rentmint-accent/10 text-rentmint-accent">
@@ -120,9 +126,15 @@ const DirectorySection = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3">
-                    <div className="flex items-center text-sm">
-                      <MapPin className="w-4 h-4 mr-2 text-muted-foreground" />
-                      {company.areas}
+                    <div className="flex items-start">
+                      <MapPin className="w-4 h-4 mr-2 mt-0.5 text-muted-foreground flex-shrink-0" />
+                      <div className="flex flex-wrap gap-1">
+                        {company.areas.split(', ').map((area, idx) => (
+                          <Badge key={idx} variant="outline" className="text-xs bg-muted/50">
+                            {area}
+                          </Badge>
+                        ))}
+                      </div>
                     </div>
                     <div className="flex items-center justify-between">
                       <Badge variant="secondary" className="bg-rentmint-accent/10 text-rentmint-accent">
