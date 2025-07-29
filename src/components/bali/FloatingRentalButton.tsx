@@ -49,6 +49,7 @@ const FloatingRentalButton = () => {
       <SheetTrigger asChild>
         <Button 
           size="lg"
+          data-testid="floating-rental-trigger"
           className="fixed top-1/2 right-6 -translate-y-1/2 z-50 bg-rentmint-primary hover:bg-rentmint-primary/90 text-white shadow-lg rounded-full px-6 py-3 flex items-center gap-2 transition-all duration-300 hover:scale-105"
         >
           <Home className="w-5 h-5" />

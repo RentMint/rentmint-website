@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { MapPin, MessageCircle, Globe, Users } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const DirectorySection = () => {
   const landlords = [
@@ -43,21 +44,25 @@ const DirectorySection = () => {
   const popularAreas = [
     {
       name: "Ubud",
+      slug: "ubud",
       description: "Cultural heart with jungle views and coworking spaces",
       priceRange: "$400-800/month"
     },
     {
       name: "Canggu",
+      slug: "canggu",
       description: "Surf town with beach access and vibrant nomad community",
       priceRange: "$500-1000/month"
     },
     {
       name: "Seminyak",
+      slug: "seminyak",
       description: "Upscale area with restaurants, clubs, and luxury amenities",
       priceRange: "$600-1200/month"
     },
     {
       name: "Sanur",
+      slug: "sanur",
       description: "Quiet beachside town perfect for families and remote work",
       priceRange: "$350-700/month"
     }
@@ -160,20 +165,22 @@ const DirectorySection = () => {
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {popularAreas.map((area, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow cursor-pointer">
-                <CardHeader>
-                  <CardTitle className="text-lg">{area.name}</CardTitle>
-                  <CardDescription className="text-sm">{area.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="text-lg font-semibold text-rentmint-primary mb-2">
-                    {area.priceRange}
-                  </div>
-                  <Button size="sm" variant="outline" className="w-full">
-                    View Area Guide
-                  </Button>
-                </CardContent>
-              </Card>
+              <Link key={index} to={`/bali/${area.slug}`} className="block">
+                <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
+                  <CardHeader>
+                    <CardTitle className="text-lg">{area.name}</CardTitle>
+                    <CardDescription className="text-sm">{area.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="text-lg font-semibold text-rentmint-primary mb-2">
+                      {area.priceRange}
+                    </div>
+                    <Button size="sm" variant="outline" className="w-full">
+                      View Area Guide
+                    </Button>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>

@@ -5,6 +5,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Bali from "./pages/Bali";
+import Ubud from "./pages/bali/Ubud";
+import Canggu from "./pages/bali/Canggu";
+import Seminyak from "./pages/bali/Seminyak";
+import Sanur from "./pages/bali/Sanur";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -18,6 +22,10 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/bali" element={<Bali />} />
+          <Route path="/bali/ubud" element={<Ubud />} />
+          <Route path="/bali/canggu" element={<Canggu />} />
+          <Route path="/bali/seminyak" element={<Seminyak />} />
+          <Route path="/bali/sanur" element={<Sanur />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
