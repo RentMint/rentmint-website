@@ -9,6 +9,7 @@ import Ubud from "./pages/bali/Ubud";
 import Canggu from "./pages/bali/Canggu";
 import Seminyak from "./pages/bali/Seminyak";
 import Sanur from "./pages/bali/Sanur";
+import HowRentWorks from "./pages/bali/HowRentWorks";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/bali/canggu" element={<Canggu />} />
           <Route path="/bali/seminyak" element={<Seminyak />} />
           <Route path="/bali/sanur" element={<Sanur />} />
+          <Route path="/bali/how-rent-works" element={<HowRentWorks />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
