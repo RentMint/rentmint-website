@@ -1,8 +1,22 @@
+import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AreaPageTemplate from "@/components/bali/AreaPageTemplate";
 
 const Seminyak = () => {
+  useEffect(() => {
+    document.title = "Seminyak Rentals | Crypto-Friendly Housing in Bali | RentMint";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Find luxury crypto-friendly rentals in Seminyak, Bali. Upscale beach destination with sophisticated dining, premium coworking spaces, and USDT payment options.');
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'description';
+      meta.content = 'Find luxury crypto-friendly rentals in Seminyak, Bali. Upscale beach destination with sophisticated dining, premium coworking spaces, and USDT payment options.';
+      document.head.appendChild(meta);
+    }
+  }, []);
+
   const seminyakData = {
     areaName: "Seminyak",
     description: "Upscale beach destination with luxury amenities, sophisticated dining, and premium coworking spaces",

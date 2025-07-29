@@ -1,8 +1,22 @@
+import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AreaPageTemplate from "@/components/bali/AreaPageTemplate";
 
 const Sanur = () => {
+  useEffect(() => {
+    document.title = "Sanur Rentals | Affordable Housing in Bali | RentMint";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Find affordable crypto-friendly rentals in Sanur, Bali. Peaceful family-friendly area with calm beaches, budget accommodations, and growing crypto acceptance.');
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'description';
+      meta.content = 'Find affordable crypto-friendly rentals in Sanur, Bali. Peaceful family-friendly area with calm beaches, budget accommodations, and growing crypto acceptance.';
+      document.head.appendChild(meta);
+    }
+  }, []);
+
   const sanurData = {
     areaName: "Sanur",
     description: "Peaceful family-friendly area with calm beaches, affordable living, and growing digital nomad presence",

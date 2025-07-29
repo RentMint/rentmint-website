@@ -1,8 +1,22 @@
+import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AreaPageTemplate from "@/components/bali/AreaPageTemplate";
 
 const Ubud = () => {
+  useEffect(() => {
+    document.title = "Ubud Rentals | Digital Nomad Housing in Bali | RentMint";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Discover crypto-friendly rentals in Ubud, Bali. Cultural hub for digital nomads with excellent coworking spaces, yoga retreats, and USDT/USDC payment options.');
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'description';
+      meta.content = 'Discover crypto-friendly rentals in Ubud, Bali. Cultural hub for digital nomads with excellent coworking spaces, yoga retreats, and USDT/USDC payment options.';
+      document.head.appendChild(meta);
+    }
+  }, []);
+
   const ubudData = {
     areaName: "Ubud",
     description: "Cultural hub for digital nomads with vibrant coworking spaces, yoga retreats, and traditional Balinese charm",

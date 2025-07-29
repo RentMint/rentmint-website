@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, XCircle, Wifi, Car, Home, DollarSign } from "lucide-react";
+import { CheckCircle, XCircle, Wifi, Car, Home, DollarSign, ArrowLeft } from "lucide-react";
+import { Link } from "react-router-dom";
 import FloatingRentalButton from "./FloatingRentalButton";
 
 interface AreaPageTemplateProps {
@@ -69,13 +70,26 @@ const AreaPageTemplate = ({
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Navigation */}
+      <div className="sticky top-20 z-40 bg-background/80 backdrop-blur-md border-b border-border/50">
+        <div className="container mx-auto max-w-4xl px-4 py-3">
+          <Link 
+            to="/bali" 
+            className="inline-flex items-center gap-2 text-muted-foreground hover:text-rentmint-primary transition-colors duration-200"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            <span className="text-sm font-medium">Back to Bali Guide</span>
+          </Link>
+        </div>
+      </div>
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-rentmint-primary/5 to-rentmint-accent/5 py-16 px-4">
+      <section className="bg-gradient-to-br from-rentmint-primary/5 to-rentmint-accent/5 py-12 sm:py-16 px-4">
         <div className="container mx-auto max-w-4xl text-center">
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-rentmint-primary mb-4">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-rentmint-primary mb-4 leading-tight">
             Renting in {areaName}
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             {description}
           </p>
           <Badge 
@@ -87,9 +101,9 @@ const AreaPageTemplate = ({
       </section>
 
       {/* Content Section */}
-      <section className="py-16 px-4">
+      <section className="py-12 sm:py-16 px-4">
         <div className="container mx-auto max-w-4xl">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
             
             {/* Average Rental Prices */}
             <Card>
@@ -129,7 +143,7 @@ const AreaPageTemplate = ({
           </div>
 
           {/* Pros & Cons */}
-          <div className="grid md:grid-cols-2 gap-8 mt-12">
+          <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mt-8 sm:mt-12">
             
             {/* Pros */}
             <Card>
@@ -174,7 +188,7 @@ const AreaPageTemplate = ({
           </div>
 
           {/* Best For Section */}
-          <div className="mt-12">
+          <div className="mt-8 sm:mt-12">
             <Card>
               <CardHeader>
                 <CardTitle className="text-rentmint-primary flex items-center gap-2">
@@ -195,7 +209,7 @@ const AreaPageTemplate = ({
           </div>
 
           {/* New Information Sections */}
-          <div className="grid md:grid-cols-2 gap-8 mt-12">
+          <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mt-8 sm:mt-12">
             
             {/* Internet & Workspace Info */}
             <Card>
@@ -258,7 +272,7 @@ const AreaPageTemplate = ({
           </div>
 
           {/* Additional Info Sections */}
-          <div className="grid md:grid-cols-2 gap-8 mt-8">
+          <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mt-6 sm:mt-8">
             
             {/* Types of Available Rentals */}
             <Card>
@@ -321,18 +335,18 @@ const AreaPageTemplate = ({
           </div>
 
           {/* CTA Section */}
-          <div className="mt-16 text-center">
+          <div className="mt-12 sm:mt-16 text-center">
             <Card className="bg-gradient-to-r from-rentmint-primary/5 to-rentmint-accent/5 border-rentmint-primary/20">
-              <CardContent className="py-8">
-                <h3 className="text-2xl font-display font-semibold text-rentmint-primary mb-4">
+              <CardContent className="py-6 sm:py-8 px-4 sm:px-6">
+                <h3 className="text-xl sm:text-2xl font-display font-semibold text-rentmint-primary mb-4">
                   Ready to Find Your Perfect Rental in {areaName}?
                 </h3>
-                <p className="text-muted-foreground mb-6 max-w-md mx-auto">
+                <p className="text-muted-foreground mb-6 max-w-md mx-auto text-sm sm:text-base">
                   Submit your preferences and we'll connect you with crypto-friendly landlords in {areaName}.
                 </p>
                 <Button 
                   size="lg"
-                  className="bg-rentmint-accent hover:bg-rentmint-accent/90 text-white px-8"
+                  className="bg-rentmint-accent hover:bg-rentmint-accent/90 text-white px-6 sm:px-8"
                   onClick={() => {
                     // Trigger the floating button's sheet
                     const floatingButton = document.querySelector('[data-testid="floating-rental-trigger"]') as HTMLButtonElement;

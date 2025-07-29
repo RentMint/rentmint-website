@@ -50,7 +50,7 @@ const FloatingRentalButton = () => {
         <Button 
           size="lg"
           data-testid="floating-rental-trigger"
-          className="fixed top-1/2 right-6 -translate-y-1/2 z-50 bg-rentmint-accent hover:bg-rentmint-accent/90 text-white shadow-lg rounded-full px-6 py-3 flex items-center gap-2 transition-all duration-300 hover:scale-105 animate-pulse hover:animate-none"
+          className="fixed top-1/2 right-6 -translate-y-1/2 z-50 bg-rentmint-accent hover:bg-rentmint-accent/90 text-white shadow-lg rounded-full px-6 py-3 flex items-center gap-2 transition-all duration-300 hover:scale-105"
         >
           <Home className="w-5 h-5" />
           <span className="hidden sm:inline">Find Rentals</span>

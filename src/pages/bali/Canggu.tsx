@@ -1,8 +1,22 @@
+import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AreaPageTemplate from "@/components/bali/AreaPageTemplate";
 
 const Canggu = () => {
+  useEffect(() => {
+    document.title = "Canggu Rentals | Surf & Digital Nomad Housing in Bali | RentMint";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Find crypto-friendly rentals in Canggu, Bali. Surf paradise and digital nomad hotspot with beachfront coworking, modern amenities, and Bitcoin/USDT payments.');
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'description';
+      meta.content = 'Find crypto-friendly rentals in Canggu, Bali. Surf paradise and digital nomad hotspot with beachfront coworking, modern amenities, and Bitcoin/USDT payments.';
+      document.head.appendChild(meta);
+    }
+  }, []);
+
   const cangguData = {
     areaName: "Canggu",
     description: "Surf paradise and digital nomad hotspot with beachfront coworking, vibrant nightlife, and modern amenities",
