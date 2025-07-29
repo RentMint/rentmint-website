@@ -11,19 +11,19 @@ const Bali = () => {
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-20 px-4 bg-gradient-to-br from-background to-muted/30">
+        <section className="py-12 px-4 bg-gradient-to-br from-background to-muted/30">
           <div className="container mx-auto max-w-4xl text-center">
             <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 text-rentmint-primary">
               Find & Rent Homes in Bali—Crypto-Friendly & Hassle-Free
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto font-medium mb-8">
-              Enjoy seamless rent payments using stablecoins. Avoid FX fees and volatility. Connect directly with crypto-friendly landlords.
+              Rent directly using USDT/USDC. No FX fees. Instant transactions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-rentmint-primary hover:bg-rentmint-primary/90 text-white">
+              <Button size="lg" className="bg-rentmint-primary hover:bg-rentmint-primary/90 text-white shadow-lg">
                 Explore Rentals
               </Button>
-              <Button size="lg" variant="outline" className="border-rentmint-primary text-rentmint-primary hover:bg-rentmint-primary hover:text-white">
+              <Button size="lg" variant="outline" className="border-2 border-rentmint-primary text-rentmint-primary hover:bg-rentmint-primary hover:text-white font-semibold">
                 List Your Property
               </Button>
             </div>
@@ -199,13 +199,13 @@ const Bali = () => {
           <div className="container mx-auto max-w-4xl text-center">
             <div className="bg-gradient-to-r from-rentmint-primary/5 to-rentmint-accent/5 rounded-2xl p-8 md:p-12">
               <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-rentmint-primary">
-                Looking for a Rental in Bali? Let Landlords Come to You!
+                Need a Rental? Get Connected Directly.
               </h2>
               <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Submit your requirements and budget. We'll connect you with crypto-friendly landlords who have properties matching your needs.
+                Submit your preferences. We'll match you with crypto-friendly landlords instantly.
               </p>
-              <Button size="lg" className="bg-rentmint-accent hover:bg-rentmint-accent/90 text-white">
-                Submit Your Requirements
+              <Button size="lg" className="bg-rentmint-accent hover:bg-rentmint-accent/90 text-white shadow-lg">
+                Find Rentals Now
               </Button>
             </div>
           </div>
@@ -214,25 +214,19 @@ const Bali = () => {
         {/* Mini Footer Navigation */}
         <section className="py-12 px-4 bg-muted/50 border-t">
           <div className="container mx-auto max-w-4xl">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-              <div className="flex flex-wrap justify-center md:justify-start gap-6">
-                <a href="#" className="text-sm text-muted-foreground hover:text-rentmint-primary transition-colors">
-                  Rental Directory
-                </a>
-                <a href="#" className="text-sm text-muted-foreground hover:text-rentmint-primary transition-colors">
-                  Price Guide
-                </a>
-                <a href="#" className="text-sm text-muted-foreground hover:text-rentmint-primary transition-colors">
-                  FAQs
-                </a>
-                <a href="#" className="text-sm text-muted-foreground hover:text-rentmint-primary transition-colors">
-                  Newsletter
-                </a>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="text-sm text-muted-foreground">Powered by</div>
-                <div className="font-display font-bold text-rentmint-primary">RentMint</div>
-              </div>
+            <div className="flex flex-wrap justify-center gap-6">
+              <a href="#" className="text-sm text-muted-foreground hover:text-rentmint-primary transition-colors">
+                Rentals
+              </a>
+              <a href="#" className="text-sm text-muted-foreground hover:text-rentmint-primary transition-colors">
+                Pricing Guide
+              </a>
+              <a href="#" className="text-sm text-muted-foreground hover:text-rentmint-primary transition-colors">
+                FAQs
+              </a>
+              <a href="#" className="text-sm text-muted-foreground hover:text-rentmint-primary transition-colors">
+                Subscribe
+              </a>
             </div>
           </div>
         </section>
