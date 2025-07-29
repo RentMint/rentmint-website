@@ -10,6 +10,7 @@ import Canggu from "./pages/bali/Canggu";
 import Seminyak from "./pages/bali/Seminyak";
 import Sanur from "./pages/bali/Sanur";
 import HowRentWorks from "./pages/bali/HowRentWorks";
+import PricingGuide from "./pages/bali/PricingGuide";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/bali/seminyak" element={<Seminyak />} />
           <Route path="/bali/sanur" element={<Sanur />} />
           <Route path="/bali/how-rent-works" element={<HowRentWorks />} />
+          <Route path="/bali/pricing-guide" element={<PricingGuide />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
