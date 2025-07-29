@@ -37,7 +37,47 @@ const Seminyak = () => {
       "Limited coworking spaces compared to Canggu/Ubud",
       "More tourist-focused than nomad-focused",
       "Crypto acceptance varies by establishment"
-    ]
+    ],
+    bestFor: [
+      "Luxury seekers",
+      "Business travelers",
+      "Fine dining enthusiasts",
+      "Beach club lifestyle",
+      "Upscale networking",
+      "Couples retreat"
+    ],
+    internetWorkspace: {
+      averageSpeed: "25-60 Mbps",
+      coworkingSpaces: [
+        "LIVIT Coworking Seminyak",
+        "Hubud Seminyak (satellite)",
+        "Tropical Nomad Seminyak",
+        "Various upscale cafe workspaces"
+      ],
+      notes: "Fewer coworking options but premium quality with luxury amenities."
+    },
+    transportAccess: {
+      scooterNeeded: true,
+      nearestBeach: "At the beach",
+      nearestAirport: "20-30 minutes to Ngurah Rai",
+      walkability: "Central area very walkable, especially restaurant strips"
+    },
+    rentalTypes: {
+      common: [
+        "Luxury serviced apartments",
+        "High-end villa rentals",
+        "Boutique hotel residences",
+        "Premium furnished condos"
+      ],
+      furnished: true,
+      shortTermFriendly: false,
+      notes: "Focus on luxury properties with premium furnishing and services."
+    },
+    cryptoUsageTips: {
+      landlordFamiliarity: "Medium - Some experience but often prefer traditional payments",
+      paymentEase: "USDT accepted by some, but many prefer bank transfers",
+      localAgents: "Limited crypto-focused agents, mostly traditional luxury brokers"
+    }
   };
 
   return (

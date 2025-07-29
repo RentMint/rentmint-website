@@ -37,7 +37,47 @@ const Sanur = () => {
       "Older crowd, less young professional energy",
       "Internet can be less reliable in some areas",
       "Limited surf breaks compared to other areas"
-    ]
+    ],
+    bestFor: [
+      "Budget travelers",
+      "Families",
+      "Peaceful stays",
+      "Swimming enthusiasts",
+      "Local culture seekers",
+      "Airport proximity"
+    ],
+    internetWorkspace: {
+      averageSpeed: "15-40 Mbps",
+      coworkingSpaces: [
+        "Sanur Creative Hub",
+        "Bali Bustle Coworking",
+        "Various beachside cafes with Wi-Fi",
+        "Local coffee shops with workspaces"
+      ],
+      notes: "Growing infrastructure but still limited compared to main nomad hubs."
+    },
+    transportAccess: {
+      scooterNeeded: true,
+      nearestBeach: "At the beach",
+      nearestAirport: "15-25 minutes to Ngurah Rai",
+      walkability: "Main beach area walkable, but limited scope"
+    },
+    rentalTypes: {
+      common: [
+        "Budget-friendly guesthouses",
+        "Traditional family compounds",
+        "Simple furnished apartments",
+        "Beachfront budget villas"
+      ],
+      furnished: true,
+      shortTermFriendly: true,
+      notes: "Basic furnishing but great value. Many family-run accommodations."
+    },
+    cryptoUsageTips: {
+      landlordFamiliarity: "Low to medium - Growing awareness but limited experience",
+      paymentEase: "USDT slowly being adopted, but many still prefer cash/bank",
+      localAgents: "Few crypto-aware agents, mostly traditional arrangements"
+    }
   };
 
   return (

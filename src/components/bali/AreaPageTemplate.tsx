@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, XCircle } from "lucide-react";
+import { CheckCircle, XCircle, Wifi, Car, Home, DollarSign } from "lucide-react";
 import FloatingRentalButton from "./FloatingRentalButton";
 
 interface AreaPageTemplateProps {
@@ -15,6 +15,29 @@ interface AreaPageTemplateProps {
   pros: string[];
   cons: string[];
   cryptoFriendliness: "High" | "Medium" | "Low";
+  bestFor: string[];
+  internetWorkspace: {
+    averageSpeed: string;
+    coworkingSpaces: string[];
+    notes: string;
+  };
+  transportAccess: {
+    scooterNeeded: boolean;
+    nearestBeach: string;
+    nearestAirport: string;
+    walkability: string;
+  };
+  rentalTypes: {
+    common: string[];
+    furnished: boolean;
+    shortTermFriendly: boolean;
+    notes: string;
+  };
+  cryptoUsageTips: {
+    landlordFamiliarity: string;
+    paymentEase: string;
+    localAgents: string;
+  };
 }
 
 const AreaPageTemplate = ({
@@ -24,7 +47,12 @@ const AreaPageTemplate = ({
   neighborhoods,
   pros,
   cons,
-  cryptoFriendliness
+  cryptoFriendliness,
+  bestFor,
+  internetWorkspace,
+  transportAccess,
+  rentalTypes,
+  cryptoUsageTips
 }: AreaPageTemplateProps) => {
   const getCryptoRatingColor = (rating: string) => {
     switch (rating) {
@@ -145,6 +173,153 @@ const AreaPageTemplate = ({
 
           </div>
 
+          {/* Best For Section */}
+          <div className="mt-12">
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-rentmint-primary flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5" />
+                  Best for...
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {bestFor.map((item, index) => (
+                    <Badge key={index} variant="secondary" className="bg-rentmint-accent/10 text-rentmint-accent border-rentmint-accent/20">
+                      ✅ {item}
+                    </Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* New Information Sections */}
+          <div className="grid md:grid-cols-2 gap-8 mt-12">
+            
+            {/* Internet & Workspace Info */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-rentmint-primary flex items-center gap-2">
+                  <Wifi className="w-5 h-5" />
+                  Internet & Workspace Info
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div>
+                  <p className="font-medium text-sm text-muted-foreground">Average Internet Speed</p>
+                  <p className="text-rentmint-accent font-semibold">{internetWorkspace.averageSpeed}</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm text-muted-foreground mb-2">Coworking Spaces</p>
+                  <ul className="space-y-1">
+                    {internetWorkspace.coworkingSpaces.map((space, index) => (
+                      <li key={index} className="text-sm flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 bg-rentmint-accent rounded-full"></div>
+                        {space}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <p className="text-sm text-muted-foreground italic">{internetWorkspace.notes}</p>
+              </CardContent>
+            </Card>
+
+            {/* Transport & Accessibility */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-rentmint-primary flex items-center gap-2">
+                  <Car className="w-5 h-5" />
+                  Transport & Accessibility
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <p className="font-medium text-sm text-muted-foreground">Scooter Needed</p>
+                    <p className="text-sm">{transportAccess.scooterNeeded ? "✅ Yes" : "❌ No"}</p>
+                  </div>
+                  <div>
+                    <p className="font-medium text-sm text-muted-foreground">Walkability</p>
+                    <p className="text-sm">{transportAccess.walkability}</p>
+                  </div>
+                </div>
+                <div>
+                  <p className="font-medium text-sm text-muted-foreground">Nearest Beach</p>
+                  <p className="text-sm">{transportAccess.nearestBeach}</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm text-muted-foreground">Airport Distance</p>
+                  <p className="text-sm">{transportAccess.nearestAirport}</p>
+                </div>
+              </CardContent>
+            </Card>
+
+          </div>
+
+          {/* Additional Info Sections */}
+          <div className="grid md:grid-cols-2 gap-8 mt-8">
+            
+            {/* Types of Available Rentals */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-rentmint-primary flex items-center gap-2">
+                  <Home className="w-5 h-5" />
+                  Types of Available Rentals
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div>
+                  <p className="font-medium text-sm text-muted-foreground mb-2">Common Types</p>
+                  <ul className="space-y-1">
+                    {rentalTypes.common.map((type, index) => (
+                      <li key={index} className="text-sm flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 bg-rentmint-accent rounded-full"></div>
+                        {type}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <p className="font-medium text-sm text-muted-foreground">Usually Furnished</p>
+                    <p className="text-sm">{rentalTypes.furnished ? "✅ Yes" : "❌ No"}</p>
+                  </div>
+                  <div>
+                    <p className="font-medium text-sm text-muted-foreground">Short-term Friendly</p>
+                    <p className="text-sm">{rentalTypes.shortTermFriendly ? "✅ Yes" : "❌ No"}</p>
+                  </div>
+                </div>
+                <p className="text-sm text-muted-foreground italic">{rentalTypes.notes}</p>
+              </CardContent>
+            </Card>
+
+            {/* Crypto Usage Tips */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-rentmint-primary flex items-center gap-2">
+                  <DollarSign className="w-5 h-5" />
+                  Crypto Usage Tips in This Area
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div>
+                  <p className="font-medium text-sm text-muted-foreground">Landlord Familiarity</p>
+                  <p className="text-sm">{cryptoUsageTips.landlordFamiliarity}</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm text-muted-foreground">Payment Ease</p>
+                  <p className="text-sm">{cryptoUsageTips.paymentEase}</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm text-muted-foreground">Local Agents/Support</p>
+                  <p className="text-sm">{cryptoUsageTips.localAgents}</p>
+                </div>
+              </CardContent>
+            </Card>
+
+          </div>
+
           {/* CTA Section */}
           <div className="mt-16 text-center">
             <Card className="bg-gradient-to-r from-rentmint-primary/5 to-rentmint-accent/5 border-rentmint-primary/20">
@@ -157,7 +332,7 @@ const AreaPageTemplate = ({
                 </p>
                 <Button 
                   size="lg"
-                  className="bg-rentmint-primary hover:bg-rentmint-primary/90 text-white px-8"
+                  className="bg-rentmint-accent hover:bg-rentmint-accent/90 text-white px-8"
                   onClick={() => {
                     // Trigger the floating button's sheet
                     const floatingButton = document.querySelector('[data-testid="floating-rental-trigger"]') as HTMLButtonElement;

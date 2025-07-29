@@ -37,7 +37,48 @@ const Canggu = () => {
       "Party atmosphere may not suit everyone",
       "Limited public transportation options",
       "Beach pollution during certain seasons"
-    ]
+    ],
+    bestFor: [
+      "Surfers",
+      "Social nomads",
+      "Beach lifestyle",
+      "Networking",
+      "Short-term stays",
+      "Young professionals"
+    ],
+    internetWorkspace: {
+      averageSpeed: "30-80 Mbps",
+      coworkingSpaces: [
+        "Dojo Bali Canggu (flagship location)",
+        "BWork Bali (beachfront)",
+        "Outpost Canggu",
+        "The Lawn Canggu",
+        "Tropical Nomad Coworking"
+      ],
+      notes: "Best internet infrastructure in Bali with fiber connections in most areas."
+    },
+    transportAccess: {
+      scooterNeeded: true,
+      nearestBeach: "At the beach",
+      nearestAirport: "30-45 minutes to Ngurah Rai",
+      walkability: "Main strips walkable, but spread out area requires scooter"
+    },
+    rentalTypes: {
+      common: [
+        "Modern villas with pools",
+        "Shared coliving spaces",
+        "Beachfront apartments",
+        "Luxury compounds with amenities"
+      ],
+      furnished: true,
+      shortTermFriendly: true,
+      notes: "Most modern rental market in Bali with professional property management."
+    },
+    cryptoUsageTips: {
+      landlordFamiliarity: "Very high - Most landlords experienced with crypto payments",
+      paymentEase: "USDT/USDC standard, many accept Bitcoin too",
+      localAgents: "Numerous crypto-specialist agencies and property managers"
+    }
   };
 
   return (

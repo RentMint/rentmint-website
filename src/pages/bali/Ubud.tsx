@@ -37,7 +37,47 @@ const Ubud = () => {
       "Some areas have inconsistent internet speeds",
       "Humid climate year-round",
       "Transportation mainly scooter-dependent"
-    ]
+    ],
+    bestFor: [
+      "Long stays",
+      "Wellness & retreats", 
+      "Solo travelers",
+      "Peace & nature",
+      "Cultural immersion",
+      "Creative professionals"
+    ],
+    internetWorkspace: {
+      averageSpeed: "20-50 Mbps",
+      coworkingSpaces: [
+        "Hubud (pioneer coworking space)",
+        "Outpost (multiple locations)",
+        "Dojo Bali (strong community)",
+        "Tropical Nomad Coworking"
+      ],
+      notes: "Central areas have excellent connectivity, but remote villas may have slower speeds."
+    },
+    transportAccess: {
+      scooterNeeded: true,
+      nearestBeach: "45-60 minutes to Sanur/Canggu",
+      nearestAirport: "45-60 minutes to Ngurah Rai",
+      walkability: "Central area walkable, but scooter needed for exploring"
+    },
+    rentalTypes: {
+      common: [
+        "Traditional Balinese villas with gardens",
+        "Modern apartments in compounds",
+        "Eco-friendly bamboo houses",
+        "Artist lofts in Penestanan"
+      ],
+      furnished: true,
+      shortTermFriendly: true,
+      notes: "Most properties come fully furnished with local artistic touches."
+    },
+    cryptoUsageTips: {
+      landlordFamiliarity: "High - Many landlords experienced with international digital nomads",
+      paymentEase: "USDT/USDC widely accepted, especially for monthly rentals",
+      localAgents: "Several local agents specialize in crypto-friendly arrangements"
+    }
   };
 
   return (
