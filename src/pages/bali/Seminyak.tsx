@@ -5,14 +5,14 @@ import AreaPageTemplate from "@/components/bali/AreaPageTemplate";
 
 const Seminyak = () => {
   useEffect(() => {
-    document.title = "Seminyak Rentals | Crypto-Friendly Housing in Bali | RentMint";
+    document.title = "Renting in Seminyak | Long-Term Crypto-Friendly Rentals in Bali | RentMint";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Find luxury crypto-friendly rentals in Seminyak, Bali. Upscale beach destination with sophisticated dining, premium coworking spaces, and USDT payment options.');
+      metaDescription.setAttribute('content', 'Discover long-stay rental options in Seminyak, Bali. See area pricing, verified hosts, and submit your request to get matched with crypto-friendly landlords.');
     } else {
       const meta = document.createElement('meta');
       meta.name = 'description';
-      meta.content = 'Find luxury crypto-friendly rentals in Seminyak, Bali. Upscale beach destination with sophisticated dining, premium coworking spaces, and USDT payment options.';
+      meta.content = 'Discover long-stay rental options in Seminyak, Bali. See area pricing, verified hosts, and submit your request to get matched with crypto-friendly landlords.';
       document.head.appendChild(meta);
     }
   }, []);
@@ -20,7 +20,24 @@ const Seminyak = () => {
   const seminyakData = {
     areaName: "Seminyak",
     description: "Upscale beach destination with luxury amenities, sophisticated dining, and premium coworking spaces",
+    knownFor: [
+      "Luxury beach clubs",
+      "Fine dining scene",
+      "Upscale shopping",
+      "Premium accommodations",
+      "Business networking",
+      "Sophisticated nightlife",
+      "6+ month stays"
+    ],
     cryptoFriendliness: "Medium" as const,
+    rentalStyles: [
+      "Luxury serviced apartments",
+      "High-end villa rentals",
+      "Boutique hotel residences", 
+      "Premium furnished condos",
+      "Exclusive beachfront properties"
+    ],
+    leaseDurations: ["6+ months", "12+ months", "Short-term limited"],
     priceRanges: [
       { type: "Private Room", range: "$500-700" },
       { type: "Studio Apartment", range: "$700-1000" },
@@ -91,6 +108,16 @@ const Seminyak = () => {
       landlordFamiliarity: "Medium - Some experience but often prefer traditional payments",
       paymentEase: "USDT accepted by some, but many prefer bank transfers",
       localAgents: "Limited crypto-focused agents, mostly traditional luxury brokers"
+    },
+    localTips: {
+      internetReliability: "Reliable in central areas and luxury properties. Premium locations have backup connections.",
+      coworkingCafes: [
+        "LIVIT Seminyak - Luxury coworking",
+        "Kynd Community - Wellness-focused",
+        "Café Organic - Healthy workspace",
+        "La Favela - Unique atmosphere"
+      ],
+      cryptoFriendlySpots: "Upscale establishments increasingly accept digital payments. International banking services available."
     }
   };
 

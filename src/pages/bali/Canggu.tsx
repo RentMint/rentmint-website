@@ -5,14 +5,14 @@ import AreaPageTemplate from "@/components/bali/AreaPageTemplate";
 
 const Canggu = () => {
   useEffect(() => {
-    document.title = "Canggu Rentals | Surf & Digital Nomad Housing in Bali | RentMint";
+    document.title = "Renting in Canggu | Long-Term Crypto-Friendly Rentals in Bali | RentMint";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Find crypto-friendly rentals in Canggu, Bali. Surf paradise and digital nomad hotspot with beachfront coworking, modern amenities, and Bitcoin/USDT payments.');
+      metaDescription.setAttribute('content', 'Discover long-stay rental options in Canggu, Bali. See area pricing, verified hosts, and submit your request to get matched with crypto-friendly landlords.');
     } else {
       const meta = document.createElement('meta');
       meta.name = 'description';
-      meta.content = 'Find crypto-friendly rentals in Canggu, Bali. Surf paradise and digital nomad hotspot with beachfront coworking, modern amenities, and Bitcoin/USDT payments.';
+      meta.content = 'Discover long-stay rental options in Canggu, Bali. See area pricing, verified hosts, and submit your request to get matched with crypto-friendly landlords.';
       document.head.appendChild(meta);
     }
   }, []);
@@ -20,7 +20,24 @@ const Canggu = () => {
   const cangguData = {
     areaName: "Canggu",
     description: "Surf paradise and digital nomad hotspot with beachfront coworking, vibrant nightlife, and modern amenities",
+    knownFor: [
+      "Surf breaks & beach life",
+      "Digital nomad hub",
+      "Vibrant nightlife",
+      "Beachfront coworking",
+      "Social networking",
+      "Modern infrastructure",
+      "Short-term friendly"
+    ],
     cryptoFriendliness: "High" as const,
+    rentalStyles: [
+      "Modern villas with pools",
+      "Shared coliving spaces", 
+      "Beachfront apartments",
+      "Luxury compounds with amenities",
+      "Boutique hotel residences"
+    ],
+    leaseDurations: ["1+ months", "3+ months", "6+ months", "Short-term common"],
     priceRanges: [
       { type: "Shared Villa Room", range: "$400-600" },
       { type: "Studio Apartment", range: "$600-900" },
@@ -92,6 +109,16 @@ const Canggu = () => {
       landlordFamiliarity: "Very high - Most landlords experienced with crypto payments",
       paymentEase: "USDT/USDC standard, many accept Bitcoin too",
       localAgents: "Numerous crypto-specialist agencies and property managers"
+    },
+    localTips: {
+      internetReliability: "Excellent fiber coverage throughout most areas. Backup options widely available.",
+      coworkingCafes: [
+        "Dojo Bali - Premier nomad coworking",
+        "BWork - Beachfront workspace",
+        "Milk & Madu - Popular café workspace",
+        "The Shady Shack - Healthy food + wifi"
+      ],
+      cryptoFriendlySpots: "Most establishments accept digital payments. ATMs abundant. Many crypto-focused events and meetups."
     }
   };
 

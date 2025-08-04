@@ -5,14 +5,14 @@ import AreaPageTemplate from "@/components/bali/AreaPageTemplate";
 
 const Sanur = () => {
   useEffect(() => {
-    document.title = "Sanur Rentals | Affordable Housing in Bali | RentMint";
+    document.title = "Renting in Sanur | Long-Term Crypto-Friendly Rentals in Bali | RentMint";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Find affordable crypto-friendly rentals in Sanur, Bali. Peaceful family-friendly area with calm beaches, budget accommodations, and growing crypto acceptance.');
+      metaDescription.setAttribute('content', 'Discover long-stay rental options in Sanur, Bali. See area pricing, verified hosts, and submit your request to get matched with crypto-friendly landlords.');
     } else {
       const meta = document.createElement('meta');
       meta.name = 'description';
-      meta.content = 'Find affordable crypto-friendly rentals in Sanur, Bali. Peaceful family-friendly area with calm beaches, budget accommodations, and growing crypto acceptance.';
+      meta.content = 'Discover long-stay rental options in Sanur, Bali. See area pricing, verified hosts, and submit your request to get matched with crypto-friendly landlords.';
       document.head.appendChild(meta);
     }
   }, []);
@@ -20,7 +20,24 @@ const Sanur = () => {
   const sanurData = {
     areaName: "Sanur",
     description: "Peaceful family-friendly area with calm beaches, affordable living, and growing digital nomad presence",
+    knownFor: [
+      "Budget-friendly options",
+      "Family-friendly atmosphere",
+      "Calm swimming beaches",
+      "Local culture",
+      "Airport proximity",
+      "Traditional markets",
+      "6+ month stays"
+    ],
     cryptoFriendliness: "Medium" as const,
+    rentalStyles: [
+      "Budget-friendly guesthouses",
+      "Traditional family compounds",
+      "Simple furnished apartments",
+      "Beachfront budget villas",
+      "Local homestay options"
+    ],
+    leaseDurations: ["3+ months", "6+ months", "12+ months", "Short-term available"],
     priceRanges: [
       { type: "Private Room", range: "$250-400" },
       { type: "Studio Apartment", range: "$400-650" },
@@ -91,6 +108,16 @@ const Sanur = () => {
       landlordFamiliarity: "Low to medium - Growing awareness but limited experience",
       paymentEase: "USDT slowly being adopted, but many still prefer cash/bank",
       localAgents: "Few crypto-aware agents, mostly traditional arrangements"
+    },
+    localTips: {
+      internetReliability: "Variable - main areas have decent connectivity, but check before committing to longer stays.",
+      coworkingCafes: [
+        "Sanur Creative Hub - Main workspace",
+        "Café Batu Jimbar - Beachside working",
+        "Warung Mak Beng - Local institution",
+        "Three Monkeys Café - Tourist-friendly"
+      ],
+      cryptoFriendlySpots: "Limited but growing. ATMs widely available. Traditional payment methods still preferred."
     }
   };
 

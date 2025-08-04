@@ -5,14 +5,14 @@ import AreaPageTemplate from "@/components/bali/AreaPageTemplate";
 
 const Ubud = () => {
   useEffect(() => {
-    document.title = "Ubud Rentals | Digital Nomad Housing in Bali | RentMint";
+    document.title = "Renting in Ubud | Long-Term Crypto-Friendly Rentals in Bali | RentMint";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Discover crypto-friendly rentals in Ubud, Bali. Cultural hub for digital nomads with excellent coworking spaces, yoga retreats, and USDT/USDC payment options.');
+      metaDescription.setAttribute('content', 'Discover long-stay rental options in Ubud, Bali. See area pricing, verified hosts, and submit your request to get matched with crypto-friendly landlords.');
     } else {
       const meta = document.createElement('meta');
       meta.name = 'description';
-      meta.content = 'Discover crypto-friendly rentals in Ubud, Bali. Cultural hub for digital nomads with excellent coworking spaces, yoga retreats, and USDT/USDC payment options.';
+      meta.content = 'Discover long-stay rental options in Ubud, Bali. See area pricing, verified hosts, and submit your request to get matched with crypto-friendly landlords.';
       document.head.appendChild(meta);
     }
   }, []);
@@ -20,7 +20,24 @@ const Ubud = () => {
   const ubudData = {
     areaName: "Ubud",
     description: "Cultural hub for digital nomads with vibrant coworking spaces, yoga retreats, and traditional Balinese charm",
+    knownFor: [
+      "Yoga retreats & wellness",
+      "Cultural immersion",
+      "Coworking spaces",
+      "Artist communities",
+      "Rice terrace views",
+      "Quiet neighborhoods",
+      "Long-stay friendly"
+    ],
     cryptoFriendliness: "High" as const,
+    rentalStyles: [
+      "Traditional Balinese villas with gardens",
+      "Modern apartments in compounds",
+      "Eco-friendly bamboo houses",
+      "Artist lofts in Penestanan",
+      "Shared villa accommodations"
+    ],
+    leaseDurations: ["3+ months", "6+ months", "12+ months", "Short-term rare"],
     priceRanges: [
       { type: "Private Room", range: "$300-500" },
       { type: "Studio Apartment", range: "$500-800" },
@@ -91,6 +108,16 @@ const Ubud = () => {
       landlordFamiliarity: "High - Many landlords experienced with international digital nomads",
       paymentEase: "USDT/USDC widely accepted, especially for monthly rentals",
       localAgents: "Several local agents specialize in crypto-friendly arrangements"
+    },
+    localTips: {
+      internetReliability: "Central Ubud has reliable fiber, but check speeds in rural villa areas before committing",
+      coworkingCafes: [
+        "Hubud - The original coworking space",
+        "Seeds of Life - Café with great wifi",
+        "Watercress Café - Quiet workspace",
+        "Kafe Batan Waru - Local favorite"
+      ],
+      cryptoFriendlySpots: "Most modern cafés and coworking spaces accept digital payments. ATMs are abundant in central areas."
     }
   };
 
