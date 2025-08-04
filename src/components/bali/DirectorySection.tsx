@@ -5,39 +5,41 @@ import { MapPin, MessageCircle, Globe, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const DirectorySection = () => {
-  const landlords = [
+  const verifiedHosts = [
     {
-      name: "Bali Crypto Properties",
-      contact: "WhatsApp",
+      name: "Villa Sunbird",
       areas: ["Ubud", "Canggu"],
-      description: "Experienced landlord with 15+ crypto-friendly properties"
+      type: "Individual Host",
+      rentalTerm: "3+ months",
+      description: "Experienced host with multiple properties in cultural and surf areas"
     },
     {
       name: "Digital Nomad Villas",
-      contact: "Telegram",
       areas: ["Seminyak", "Sanur"],
-      description: "Specializing in remote worker accommodations"
+      type: "Individual Host", 
+      rentalTerm: "1-6 months",
+      description: "Specializing in remote worker accommodations with reliable internet"
     },
     {
       name: "Island Rental Co.",
-      contact: "WhatsApp",
       areas: ["Uluwatu", "Jimbaran"],
-      description: "Luxury villas and apartments, crypto payments welcome"
-    }
-  ];
-
-  const companies = [
-    {
-      name: "CryptoStay Bali",
-      website: "cryptostay-bali.com",
-      areas: "Island-wide",
-      description: "Full-service rental platform for crypto payments"
+      type: "Management Firm",
+      rentalTerm: "3+ months",
+      description: "Luxury villa management with professional service standards"
     },
     {
-      name: "Nomad Nest Rentals",
-      website: "nomadnest.id",
-      areas: "Canggu, Ubud, Seminyak",
-      description: "Curated properties for digital nomads"
+      name: "NomadStay Group",
+      areas: ["Canggu", "Ubud", "Seminyak"],
+      type: "Management Firm",
+      rentalTerm: "1+ months",
+      description: "Curated network of verified properties for digital nomads"
+    },
+    {
+      name: "Bali Living Properties",
+      areas: ["Sanur", "Denpasar"],
+      type: "Individual Host",
+      rentalTerm: "6+ months",
+      description: "Long-term focused host with family-friendly accommodations"
     }
   ];
 
@@ -71,29 +73,28 @@ const DirectorySection = () => {
   return (
     <section id="directory" className="py-20 px-4 scroll-mt-20">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-12 text-rentmint-primary">
-          Crypto-Friendly Directory
+        <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-4 text-rentmint-primary">
+          Verified Rental Hosts in Bali
         </h2>
+        <p className="text-center text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed">
+          Each host listed below is part of our verified network. They typically manage multiple rental units, provide receipts, and have experience working with international tenants. You can browse, then submit your rental request to be connected.
+        </p>
         
-        {/* Landlords Section */}
+        {/* Verified Hosts Section */}
         <div className="mb-16">
-          <h3 className="text-2xl font-display font-semibold mb-6 text-rentmint-primary flex items-center">
-            <Users className="w-6 h-6 mr-2" />
-            Trusted Landlords
-          </h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            {landlords.map((landlord, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {verifiedHosts.map((host, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardHeader>
-                  <CardTitle className="text-lg">{landlord.name}</CardTitle>
-                  <CardDescription>{landlord.description}</CardDescription>
+                  <CardTitle className="text-lg">{host.name}</CardTitle>
+                  <CardDescription>{host.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3">
                     <div className="flex items-start">
                       <MapPin className="w-4 h-4 mr-2 mt-0.5 text-muted-foreground flex-shrink-0" />
                       <div className="flex flex-wrap gap-1">
-                        {landlord.areas.map((area, idx) => (
+                        {host.areas.map((area, idx) => (
                           <Badge key={idx} variant="outline" className="text-xs bg-muted/50">
                             {area}
                           </Badge>
@@ -101,53 +102,25 @@ const DirectorySection = () => {
                       </div>
                     </div>
                     <div className="flex items-center justify-between">
-                      <Badge variant="secondary" className="bg-rentmint-accent/10 text-rentmint-accent">
-                        USDT/USDC Accepted
+                      <Badge variant="secondary" className="text-xs">
+                        {host.type}
                       </Badge>
-                      <Button size="sm" variant="outline">
+                      <span className="text-sm text-muted-foreground">{host.rentalTerm}</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200">
+                        Flexible Payment Options
+                      </Badge>
+                      <Button 
+                        size="sm" 
+                        variant="outline"
+                        onClick={() => {
+                          const button = document.querySelector('[data-testid="floating-rental-trigger"]') as HTMLButtonElement;
+                          button?.click();
+                        }}
+                      >
                         <MessageCircle className="w-4 h-4 mr-1" />
-                        {landlord.contact}
-                      </Button>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        {/* Rental Companies Section */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-display font-semibold mb-6 text-rentmint-primary flex items-center">
-            <Globe className="w-6 h-6 mr-2" />
-            Rental Companies
-          </h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            {companies.map((company, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <CardTitle className="text-lg">{company.name}</CardTitle>
-                  <CardDescription>{company.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-3">
-                    <div className="flex items-start">
-                      <MapPin className="w-4 h-4 mr-2 mt-0.5 text-muted-foreground flex-shrink-0" />
-                      <div className="flex flex-wrap gap-1">
-                        {company.areas.split(', ').map((area, idx) => (
-                          <Badge key={idx} variant="outline" className="text-xs bg-muted/50">
-                            {area}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <Badge variant="secondary" className="bg-rentmint-accent/10 text-rentmint-accent">
-                        Crypto Platform
-                      </Badge>
-                      <Button size="sm" variant="outline">
-                        <Globe className="w-4 h-4 mr-1" />
-                        Visit Website
+                        Contact
                       </Button>
                     </div>
                   </div>

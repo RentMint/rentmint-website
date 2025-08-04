@@ -16,8 +16,10 @@ const FloatingRentalButton = () => {
     contact: "",
     contactMethod: "",
     area: "",
+    rentalType: "",
     budget: "",
-    preferences: ""
+    duration: "",
+    notes: ""
   });
   const { toast } = useToast();
 
@@ -29,7 +31,7 @@ const FloatingRentalButton = () => {
     // Show success toast and close sheet
     toast({
       title: "Request Submitted!",
-      description: "We'll connect you with suitable landlords soon.",
+      description: "We'll share your request privately with verified rental hosts in our network. Expect replies within 24–48 hours.",
     });
     
     // Reset form and close sheet
@@ -38,8 +40,10 @@ const FloatingRentalButton = () => {
       contact: "",
       contactMethod: "",
       area: "",
+      rentalType: "",
       budget: "",
-      preferences: ""
+      duration: "",
+      notes: ""
     });
     setOpen(false);
   };
@@ -53,17 +57,17 @@ const FloatingRentalButton = () => {
           className="fixed top-1/2 right-6 -translate-y-1/2 z-50 bg-rentmint-accent hover:bg-rentmint-accent/90 text-white shadow-lg rounded-full px-6 py-3 flex items-center gap-2 transition-all duration-300 hover:scale-105"
         >
           <Home className="w-5 h-5" />
-          <span className="hidden sm:inline">Find Rentals</span>
+          <span className="hidden sm:inline">Submit Rental Request</span>
         </Button>
       </SheetTrigger>
       
       <SheetContent side="right" className="w-full sm:max-w-lg overflow-y-auto">
         <SheetHeader>
           <SheetTitle className="text-2xl font-display text-rentmint-primary">
-            Find Your Perfect Rental
+            Tell Us What You're Looking For
           </SheetTitle>
           <SheetDescription>
-            Submit your preferences and we'll connect you with crypto-friendly landlords
+            Share your rental preferences and we'll connect you with verified hosts in our network
           </SheetDescription>
         </SheetHeader>
         
@@ -71,7 +75,7 @@ const FloatingRentalButton = () => {
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label htmlFor="name">Name / Pseudonym</Label>
+                <Label htmlFor="name">Name or Pseudonym</Label>
                 <Input
                   id="name"
                   placeholder="Your name or preferred alias"
@@ -90,32 +94,82 @@ const FloatingRentalButton = () => {
               </div>
             </div>
 
+            <div className="space-y-2">
+              <Label htmlFor="contactMethod">Preferred Contact Method</Label>
+              <Select onValueChange={(value) => setFormData({...formData, contactMethod: value})}>
+                <SelectTrigger>
+                  <SelectValue placeholder="Select method" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="whatsapp">WhatsApp</SelectItem>
+                  <SelectItem value="email">Email</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
             <div className="grid md:grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label htmlFor="contactMethod">Preferred Contact Method</Label>
-                <Select onValueChange={(value) => setFormData({...formData, contactMethod: value})}>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Select method" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="whatsapp">WhatsApp</SelectItem>
-                    <SelectItem value="telegram">Telegram</SelectItem>
-                    <SelectItem value="email">Email</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="area">Preferred Area</Label>
+                <Label htmlFor="area">Desired Area</Label>
                 <Select onValueChange={(value) => setFormData({...formData, area: value})}>
                   <SelectTrigger>
                     <SelectValue placeholder="Select area" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="ubud">Ubud</SelectItem>
                     <SelectItem value="canggu">Canggu</SelectItem>
+                    <SelectItem value="ubud">Ubud</SelectItem>
                     <SelectItem value="seminyak">Seminyak</SelectItem>
                     <SelectItem value="sanur">Sanur</SelectItem>
                     <SelectItem value="uluwatu">Uluwatu</SelectItem>
+                    <SelectItem value="jimbaran">Jimbaran</SelectItem>
+                    <SelectItem value="denpasar">Denpasar</SelectItem>
+                    <SelectItem value="flexible">Flexible / Multiple Areas</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="rentalType">Rental Type</Label>
+                <Select onValueChange={(value) => setFormData({...formData, rentalType: value})}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select type" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="apartment">Apartment</SelectItem>
+                    <SelectItem value="villa">Villa</SelectItem>
+                    <SelectItem value="shared-space">Shared Space</SelectItem>
+                    <SelectItem value="studio">Studio</SelectItem>
+                    <SelectItem value="house">House</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="space-y-2">
+                <Label htmlFor="budget">Budget in USDT/USDC</Label>
+                <Select onValueChange={(value) => setFormData({...formData, budget: value})}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select budget range" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="300-500">$300-500/month</SelectItem>
+                    <SelectItem value="500-800">$500-800/month</SelectItem>
+                    <SelectItem value="800-1200">$800-1200/month</SelectItem>
+                    <SelectItem value="1200-1800">$1200-1800/month</SelectItem>
+                    <SelectItem value="1800+">$1800+/month</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="duration">Stay Duration</Label>
+                <Select onValueChange={(value) => setFormData({...formData, duration: value})}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select duration" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="1-3-months">1-3 months</SelectItem>
+                    <SelectItem value="3-6-months">3-6 months</SelectItem>
+                    <SelectItem value="6-12-months">6-12 months</SelectItem>
+                    <SelectItem value="12+-months">12+ months</SelectItem>
                     <SelectItem value="flexible">Flexible</SelectItem>
                   </SelectContent>
                 </Select>
@@ -123,27 +177,12 @@ const FloatingRentalButton = () => {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="budget">Monthly Budget (USDT/USDC)</Label>
-              <Select onValueChange={(value) => setFormData({...formData, budget: value})}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Select budget range" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="300-500">$300-500</SelectItem>
-                  <SelectItem value="500-800">$500-800</SelectItem>
-                  <SelectItem value="800-1200">$800-1200</SelectItem>
-                  <SelectItem value="1200+">$1200+</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="preferences">Additional Preferences</Label>
+              <Label htmlFor="notes">Additional Notes</Label>
               <Textarea
-                id="preferences"
-                placeholder="e.g., pet-friendly, furnished, coworking nearby, private pool..."
-                value={formData.preferences}
-                onChange={(e) => setFormData({...formData, preferences: e.target.value})}
+                id="notes"
+                placeholder="e.g., pet-friendly, furnished, coworking nearby, private pool, specific move-in date..."
+                value={formData.notes}
+                onChange={(e) => setFormData({...formData, notes: e.target.value})}
                 rows={3}
               />
             </div>
