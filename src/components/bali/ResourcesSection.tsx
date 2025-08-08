@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { FileText, HelpCircle, Calculator, BookOpen } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ResourcesSection = () => {
   const resources = [
@@ -22,7 +23,7 @@ const ResourcesSection = () => {
       title: "How Crypto Rentals Work",
       description: "Step-by-step guide to renting with USDT/USDC in Bali",
       icon: BookOpen,
-      link: "/bali/how-it-works",
+      link: "/bali/how-rent-works",
       updated: "Complete Guide"
     },
     {
@@ -55,8 +56,8 @@ const ResourcesSection = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="text-xs text-muted-foreground mb-4">{resource.updated}</div>
-                  <Button variant="outline" size="sm" className="w-full">
-                    Learn More
+                  <Button asChild variant="outline" size="sm" className="w-full">
+                    <Link to={resource.link} aria-label={`Learn more about ${resource.title}`}>Learn More</Link>
                   </Button>
                 </CardContent>
               </Card>
