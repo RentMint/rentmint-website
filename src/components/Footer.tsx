@@ -11,7 +11,7 @@ const Footer = () => {
   ];
 
   const footerLinks = [
-    { name: "Contact", href: "[YOUR_GOOGLE_FORM_CONTACT_URL]", icon: Mail },
+    { name: "Contact", href: "https://docs.google.com/forms/d/e/1FAIpQLSefn72b67gdnKkx-B0a6CpjAQDImG9XHNabvhwANb3jLFgEzw/viewform?usp=sharing&ouid=103251238522187774056", icon: Mail },
     { name: "Twitter", href: "#", icon: Twitter },
     { name: "LinkedIn", href: "#", icon: Linkedin },
     { name: "GitHub", href: "#", icon: Github },

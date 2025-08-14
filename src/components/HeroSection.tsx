@@ -51,9 +51,11 @@ const HeroSection = () => {
             </p>
 
             {/* Call-to-action */}
-            <Button size="lg" className="bg-gradient-to-r from-rentmint-primary to-rentmint-primary/90 hover:from-rentmint-primary/90 hover:to-rentmint-primary text-rentmint-primary-foreground h-12 px-8 text-base font-semibold rounded-lg group shadow-lg hover:shadow-xl transition-all duration-300" aria-label="Get early access to RentMint crypto rent collection platform">
-              Get Early Access
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+            <Button size="lg" className="bg-gradient-to-r from-rentmint-primary to-rentmint-primary/90 hover:from-rentmint-primary/90 hover:to-rentmint-primary text-rentmint-primary-foreground h-12 px-8 text-base font-semibold rounded-lg group shadow-lg hover:shadow-xl transition-all duration-300" aria-label="Get early access to RentMint crypto rent collection platform" asChild>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSctad-5lRzxUgJbiAqUYC5qmYoEVMD1xaci-fD1CKNmIfGgNA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
+                Get Early Access
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+              </a>
             </Button>
 
             {/* Trust indicators */}

@@ -29,7 +29,7 @@ const CTASection = () => {
             className="bg-gradient-to-r from-rentmint-primary to-rentmint-primary/90 hover:from-rentmint-primary/90 hover:to-rentmint-primary text-rentmint-primary-foreground h-12 px-8 text-base font-semibold rounded-lg group shadow-lg hover:shadow-xl transition-all duration-300 min-w-[160px]"
             asChild
           >
-            <a href="[YOUR_GOOGLE_FORM_SIGNUP_URL]" target="_blank" rel="noopener noreferrer">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSctad-5lRzxUgJbiAqUYC5qmYoEVMD1xaci-fD1CKNmIfGgNA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
               Sign Up
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </a>
@@ -41,7 +41,7 @@ const CTASection = () => {
             className="border-2 border-rentmint-primary/20 text-rentmint-primary hover:bg-rentmint-primary hover:text-rentmint-primary-foreground h-12 px-8 text-base font-semibold rounded-lg group shadow-lg hover:shadow-xl transition-all duration-300 min-w-[160px] bg-background/80 backdrop-blur-sm"
             asChild
           >
-            <a href="[YOUR_GOOGLE_FORM_CONTACT_URL]" target="_blank" rel="noopener noreferrer">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSefn72b67gdnKkx-B0a6CpjAQDImG9XHNabvhwANb3jLFgEzw/viewform?usp=sharing&ouid=103251238522187774056" target="_blank" rel="noopener noreferrer">
               <Mail className="mr-2 h-5 w-5" />
               Contact Us
             </a>
