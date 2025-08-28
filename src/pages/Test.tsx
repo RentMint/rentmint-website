@@ -18,20 +18,32 @@ const Test = () => {
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
-              <div className="flex justify-center bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 p-8 rounded-lg border-2 border-dashed border-blue-300 dark:border-blue-700">
-                <div className="text-center">
-                  <h4 className="text-lg font-semibold mb-2">Founder Fails: 9 Traps to Avoid</h4>
-                  <p className="text-sm text-muted-foreground mb-4">Infographic displays 9 common founder mistakes:</p>
-                  <div className="grid grid-cols-3 gap-2 text-xs">
-                    <div>• Lack of Research</div>
-                    <div>• Ignoring Competition</div>
-                    <div>• Poor Idea Validation</div>
-                    <div>• Poor Time Management</div>
-                    <div>• No Clear Vision</div>
-                    <div>• Team Conflict</div>
-                    <div>• Scaling Too Fast</div>
-                    <div>• No Customer Feedback</div>
-                    <div>• Isolation</div>
+              <div className="flex justify-center">
+                <img 
+                  src="/founder-fails.png" 
+                  alt="Founder Fails: 9 Traps to Avoid infographic" 
+                  className="max-w-full h-auto rounded-lg shadow-lg"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                    const nextEl = e.currentTarget.nextElementSibling as HTMLElement;
+                    if (nextEl) nextEl.style.display = 'block';
+                  }}
+                />
+                <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 p-8 rounded-lg border-2 border-dashed border-blue-300 dark:border-blue-700" style={{display: 'none'}}>
+                  <div className="text-center">
+                    <h4 className="text-lg font-semibold mb-2">Founder Fails: 9 Traps to Avoid</h4>
+                    <p className="text-sm text-muted-foreground mb-4">Infographic displays 9 common founder mistakes:</p>
+                    <div className="grid grid-cols-3 gap-2 text-xs">
+                      <div>• Lack of Research</div>
+                      <div>• Ignoring Competition</div>
+                      <div>• Poor Idea Validation</div>
+                      <div>• Poor Time Management</div>
+                      <div>• No Clear Vision</div>
+                      <div>• Team Conflict</div>
+                      <div>• Scaling Too Fast</div>
+                      <div>• No Customer Feedback</div>
+                      <div>• Isolation</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -73,17 +85,29 @@ const Test = () => {
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
-              <div className="flex justify-center bg-gradient-to-br from-amber-50 to-amber-100 dark:from-amber-900/20 dark:to-amber-800/20 p-8 rounded-lg border-2 border-dashed border-amber-300 dark:border-amber-700">
-                <div className="text-center w-full">
-                  <h4 className="text-lg font-semibold mb-4">Used Luxury Watch Price Ranges</h4>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex justify-between border-b pb-1"><span>Rolex:</span><span>$1,500 - $800,000+</span></div>
-                    <div className="flex justify-between border-b pb-1"><span>Patek Philippe:</span><span>$6,000 - $500,000+</span></div>
-                    <div className="flex justify-between border-b pb-1"><span>Audemars Piguet:</span><span>$5,000 - $250,000+</span></div>
-                    <div className="flex justify-between border-b pb-1"><span>Omega:</span><span>$1,000 - $57,000+</span></div>
-                    <div className="flex justify-between"><span>Cartier:</span><span>$1,300 - $60,000+</span></div>
+              <div className="flex justify-center">
+                <img 
+                  src="/luxury-watches.png" 
+                  alt="Used Luxury Watch Price Ranges table" 
+                  className="max-w-full h-auto rounded-lg shadow-lg"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                    const nextEl = e.currentTarget.nextElementSibling as HTMLElement;
+                    if (nextEl) nextEl.style.display = 'block';
+                  }}
+                />
+                <div className="bg-gradient-to-br from-amber-50 to-amber-100 dark:from-amber-900/20 dark:to-amber-800/20 p-8 rounded-lg border-2 border-dashed border-amber-300 dark:border-amber-700" style={{display: 'none'}}>
+                  <div className="text-center w-full">
+                    <h4 className="text-lg font-semibold mb-4">Used Luxury Watch Price Ranges</h4>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex justify-between border-b pb-1"><span>Rolex:</span><span>$1,500 - $800,000+</span></div>
+                      <div className="flex justify-between border-b pb-1"><span>Patek Philippe:</span><span>$6,000 - $500,000+</span></div>
+                      <div className="flex justify-between border-b pb-1"><span>Audemars Piguet:</span><span>$5,000 - $250,000+</span></div>
+                      <div className="flex justify-between border-b pb-1"><span>Omega:</span><span>$1,000 - $57,000+</span></div>
+                      <div className="flex justify-between"><span>Cartier:</span><span>$1,300 - $60,000+</span></div>
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-3">*Approximate pre-owned asking prices</p>
                   </div>
-                  <p className="text-xs text-muted-foreground mt-3">*Approximate pre-owned asking prices</p>
                 </div>
               </div>
               
