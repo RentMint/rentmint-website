@@ -1,12 +1,29 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { ImageEditor } from "@/components/ImageEditor";
 
 const Test = () => {
   return (
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold text-center mb-8 text-foreground">
-          Infographic Analysis
+          Image Editor & Analysis
         </h1>
+        
+        {/* Image Editors */}
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 mb-12">
+          <ImageEditor 
+            imageUrl="/founder-fails.png" 
+            title="Edit: Founder Fails Infographic"
+          />
+          <ImageEditor 
+            imageUrl="/luxury-watches.png" 
+            title="Edit: Luxury Watch Prices"
+          />
+        </div>
+        
+        <h2 className="text-3xl font-bold text-center mb-8 text-foreground">
+          Original Analysis
+        </h2>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Founder Fails Column */}
