@@ -1,4 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { ImageOptimizer } from "@/components/ImageOptimizer";
 
 const Test = () => {
   return (
@@ -7,6 +8,10 @@ const Test = () => {
         <h1 className="text-4xl font-bold text-center mb-8 text-foreground">
           Infographic Analysis
         </h1>
+        
+        <div className="mb-8">
+          <ImageOptimizer />
+        </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Founder Fails Column */}
