@@ -20,7 +20,7 @@ const Test = () => {
             <CardContent className="space-y-6">
               <div className="flex justify-center">
                 <img 
-                  src="/founder-fails.png" 
+                  src="/images/founder-fails.png" 
                   alt="Founder Fails: 9 Traps to Avoid infographic" 
                   className="max-w-full h-auto rounded-lg shadow-lg"
                   onError={(e) => {
@@ -87,7 +87,7 @@ const Test = () => {
             <CardContent className="space-y-6">
               <div className="flex justify-center">
                 <img 
-                  src="/luxury-watches.png" 
+                  src="/images/luxury-watches.png" 
                   alt="Used Luxury Watch Price Ranges table" 
                   className="max-w-full h-auto rounded-lg shadow-lg"
                   onError={(e) => {
