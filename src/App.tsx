@@ -13,6 +13,7 @@ import HowRentWorks from "./pages/bali/HowRentWorks";
 import PricingGuide from "./pages/bali/PricingGuide";
 import FAQs from "./pages/bali/FAQs";
 import LegalInfo from "./pages/bali/LegalInfo";
+import Test from "./pages/Test";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/bali/pricing-guide" element={<PricingGuide />} />
           <Route path="/bali/faqs" element={<FAQs />} />
           <Route path="/bali/legal-info" element={<LegalInfo />} />
+          <Route path="/test" element={<Test />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
