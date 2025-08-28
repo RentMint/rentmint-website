@@ -26,8 +26,11 @@ export const ImageEditor = ({ imageUrl, title = "Image Editor" }: ImageEditorPro
       backgroundColor: "#ffffff",
     });
 
-    canvas.freeDrawingBrush.color = activeColor;
-    canvas.freeDrawingBrush.width = 3;
+    // Initialize drawing brush only if it exists
+    if (canvas.freeDrawingBrush) {
+      canvas.freeDrawingBrush.color = activeColor;
+      canvas.freeDrawingBrush.width = 3;
+    }
 
     setFabricCanvas(canvas);
 
@@ -70,6 +73,7 @@ export const ImageEditor = ({ imageUrl, title = "Image Editor" }: ImageEditorPro
 
     fabricCanvas.isDrawingMode = activeTool === "draw";
     
+    // Only set brush properties if the brush exists
     if (activeTool === "draw" && fabricCanvas.freeDrawingBrush) {
       fabricCanvas.freeDrawingBrush.color = activeColor;
       fabricCanvas.freeDrawingBrush.width = 3;
